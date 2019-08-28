@@ -18,6 +18,10 @@
 #import "UIColor+LXYHex.h"
 #import "EasyBlock.h"
 #import "NSString+LXYString.h"
-
+#import "UILabel+LXYExtension.h"
+#import "UIButton+LXYExtension.h"
+#import "UITextField+LXYExtension.h"
+#import "UIView+LXYExtension.h"
+#import "UIImageView+LXYExtension.h"
 
 #endif /* LXYKitPrefixHeader_pch */

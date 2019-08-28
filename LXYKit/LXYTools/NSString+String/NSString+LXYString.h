@@ -74,6 +74,43 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSString *)changeTimestampToDateStrWithFormatterStr:(NSString *)formatterStr;
 
+
+/** 保留小数点n位小数
+
+ @param sacle 保留到小数点后几位
+ @return 保留到小数点后几位之后的字符串
+ */
+- (NSString *)reserveAnyLengthByteBehindNumPointWithSacle:(NSInteger)sacle;
+
+/** 判断一串字符串是否只包含数字和字母 */
++ (BOOL)judgeAStringContainOnlyLettersAndNumbersWith:(NSString *)checkStr;
+
+/** 转人民币格式为美元格式价格 */
+- (NSString *)convertRMBIntoDollarFormat;
+
+/** 中间添加z横线 */
++(NSMutableAttributedString *)addLineInMiddleWithPriceString:(NSString *)priceStr;
+
+/** 字符串转化为手机号码格式 */
+- (NSString *)stringConvertToMobileFormat;
+
+/** 电话号码中间四位用****表示 */
++ (NSString *)replacePhoneNumWithStarWithPhoneNum:(NSString *)phoneNum;
+
+/** 银行卡号中间八位用**** ****表示 */
++ (NSString *)replaceBlankCardNumWithStarWith:(NSString *)blankCardNum;
+
+/** 数组中文格式（几万）可自行添加 */
++ (NSString*)stringChineseFormat:(double)value;
+
+/** 判断字符串中是否包含http */
+- (BOOL)judgeUrlStrIsRangHttp;
+
+/** 判断字符串中是否包含Emoji */
+- (BOOL)stringIsContainsEmoji;
+
+/** 剪切字符串的前n位 */
++ (NSString *)cutOutFontBytesWithString:(NSString *)cutOutString withNum:(NSInteger)num;
 @end
 
 NS_ASSUME_NONNULL_END

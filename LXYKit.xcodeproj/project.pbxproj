@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB56ACD7231633E200C068BF /* UILabel+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACD6231633E200C068BF /* UILabel+LXYExtension.m */; };
+		DB56ACDB2316596A00C068BF /* UIButton+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACDA2316596A00C068BF /* UIButton+LXYExtension.m */; };
+		DB56ACDF2316634900C068BF /* UITextField+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACDE2316634900C068BF /* UITextField+LXYExtension.m */; };
+		DB56ACE323166C2700C068BF /* UIView+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACE223166C2700C068BF /* UIView+LXYExtension.m */; };
+		DB56ACE723166CC000C068BF /* UIImageView+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACE623166CC000C068BF /* UIImageView+LXYExtension.m */; };
 		DB700D4C2315191800A6874F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D4B2315191800A6874F /* AppDelegate.m */; };
 		DB700D4F2315191800A6874F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D4E2315191800A6874F /* ViewController.m */; };
 		DB700D522315191800A6874F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB700D502315191800A6874F /* Main.storyboard */; };
@@ -60,6 +65,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB56ACD5231633E200C068BF /* UILabel+LXYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+LXYExtension.h"; sourceTree = "<group>"; };
+		DB56ACD6231633E200C068BF /* UILabel+LXYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LXYExtension.m"; sourceTree = "<group>"; };
+		DB56ACD92316596A00C068BF /* UIButton+LXYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+LXYExtension.h"; sourceTree = "<group>"; };
+		DB56ACDA2316596A00C068BF /* UIButton+LXYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LXYExtension.m"; sourceTree = "<group>"; };
+		DB56ACDD2316634900C068BF /* UITextField+LXYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+LXYExtension.h"; sourceTree = "<group>"; };
+		DB56ACDE2316634900C068BF /* UITextField+LXYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LXYExtension.m"; sourceTree = "<group>"; };
+		DB56ACE123166C2700C068BF /* UIView+LXYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LXYExtension.h"; sourceTree = "<group>"; };
+		DB56ACE223166C2700C068BF /* UIView+LXYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXYExtension.m"; sourceTree = "<group>"; };
+		DB56ACE523166CC000C068BF /* UIImageView+LXYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LXYExtension.h"; sourceTree = "<group>"; };
+		DB56ACE623166CC000C068BF /* UIImageView+LXYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LXYExtension.m"; sourceTree = "<group>"; };
 		DB700D472315191800A6874F /* LXYKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXYKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB700D4A2315191800A6874F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB700D4B2315191800A6874F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -158,6 +173,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB56ACD32316337D00C068BF /* LXYKitExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DB56ACE423166CAA00C068BF /* UIImageView+Extension */,
+				DB56ACE023166C0100C068BF /* UIView+Extension */,
+				DB56ACDC2316631700C068BF /* UITextField+Extension */,
+				DB56ACD82316594A00C068BF /* UIButton+Extension */,
+				DB56ACD4231633C800C068BF /* UILabel+Extension */,
+			);
+			path = LXYKitExtension;
+			sourceTree = "<group>";
+		};
+		DB56ACD4231633C800C068BF /* UILabel+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB56ACD5231633E200C068BF /* UILabel+LXYExtension.h */,
+				DB56ACD6231633E200C068BF /* UILabel+LXYExtension.m */,
+			);
+			path = "UILabel+Extension";
+			sourceTree = "<group>";
+		};
+		DB56ACD82316594A00C068BF /* UIButton+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB56ACD92316596A00C068BF /* UIButton+LXYExtension.h */,
+				DB56ACDA2316596A00C068BF /* UIButton+LXYExtension.m */,
+			);
+			path = "UIButton+Extension";
+			sourceTree = "<group>";
+		};
+		DB56ACDC2316631700C068BF /* UITextField+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB56ACDD2316634900C068BF /* UITextField+LXYExtension.h */,
+				DB56ACDE2316634900C068BF /* UITextField+LXYExtension.m */,
+			);
+			path = "UITextField+Extension";
+			sourceTree = "<group>";
+		};
+		DB56ACE023166C0100C068BF /* UIView+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB56ACE123166C2700C068BF /* UIView+LXYExtension.h */,
+				DB56ACE223166C2700C068BF /* UIView+LXYExtension.m */,
+			);
+			path = "UIView+Extension";
+			sourceTree = "<group>";
+		};
+		DB56ACE423166CAA00C068BF /* UIImageView+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB56ACE523166CC000C068BF /* UIImageView+LXYExtension.h */,
+				DB56ACE623166CC000C068BF /* UIImageView+LXYExtension.m */,
+			);
+			path = "UIImageView+Extension";
+			sourceTree = "<group>";
+		};
 		DB700D3E2315191800A6874F = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +258,7 @@
 				DB700D4D2315191800A6874F /* ViewController.h */,
 				DB700D4E2315191800A6874F /* ViewController.m */,
 				DB700D7C23151BA900A6874F /* LXYKitPrefixHeader.pch */,
+				DB56ACD32316337D00C068BF /* LXYKitExtension */,
 				DB700D9923151C4200A6874F /* LXYView */,
 				DB700D9523151C3B00A6874F /* LXYThirdParty */,
 				DB700D7D23151C3200A6874F /* LXYTools */,
@@ -523,12 +596,16 @@
 				DB700DBA23151C6400A6874F /* NSDate+LQCalender.m in Sources */,
 				DB700DB723151C6400A6874F /* LQCalenderView.m in Sources */,
 				DB700DD523151EAB00A6874F /* EasyGCD.m in Sources */,
+				DB56ACE723166CC000C068BF /* UIImageView+LXYExtension.m in Sources */,
 				DB700DDD23151EAB00A6874F /* EasyKVO.m in Sources */,
+				DB56ACD7231633E200C068BF /* UILabel+LXYExtension.m in Sources */,
 				DB700DD623151EAB00A6874F /* EasyTimer.m in Sources */,
 				DB700DDC23151EAB00A6874F /* UIView+EasyBlock.m in Sources */,
 				DB700D9D23151C4200A6874F /* LXYAleartView.m in Sources */,
 				DB700D8F23151C3200A6874F /* UIColor+LXYHex.m in Sources */,
 				DB700D9023151C3200A6874F /* MBProgressHUD.m in Sources */,
+				DB56ACDF2316634900C068BF /* UITextField+LXYExtension.m in Sources */,
+				DB56ACE323166C2700C068BF /* UIView+LXYExtension.m in Sources */,
 				DB700DDA23151EAB00A6874F /* UIControl+EasyBlock.m in Sources */,
 				DB700D9423151C3200A6874F /* UIView+LXYAnimation.m in Sources */,
 				DB700DB623151C6400A6874F /* LQCalenderWeekView.m in Sources */,
@@ -541,6 +618,7 @@
 				DB700DD823151EAB00A6874F /* EasyEventHandler.m in Sources */,
 				DB700DB923151C6400A6874F /* LQCalendarViewController.m in Sources */,
 				DB700D9323151C3200A6874F /* NSString+LXYString.m in Sources */,
+				DB56ACDB2316596A00C068BF /* UIButton+LXYExtension.m in Sources */,
 				DB700D4C2315191800A6874F /* AppDelegate.m in Sources */,
 				DB700DD723151EAB00A6874F /* EasyEmpty.m in Sources */,
 				DB700DB423151C6400A6874F /* LQCalenderCollectionViewCell.m in Sources */,

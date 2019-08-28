@@ -29,7 +29,23 @@
     NSLog(@"dateStr---->>%@",[NSString getTimeStrWithDate:[NSDate date] withFormatterStr:@"yyyy-MM-dd HH:mm:ss"]);
     NSLog(@"------>>>%@",[@"1566901562833" changeTimestampToDateStrWithFormatterStr:@"yyyy-MM-dd HH:mm:ss"]);
     
+    UILabel *label = [UILabel new];
+    [label setFrame:CGRectMake(100, 300, SCREEN_WIDTH - 200, 60) text:@"天下无贼" textColor:[UIColor redColor] textFont:[UIFont systemFontOfSize:16]];
+    [self.view addSubview:label];
     
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setFrame:CGRectMake(100, label.bottomY + 20, SCREEN_WIDTH - 200, 60) title:@"哈哈哈哈" titleFont:[UIFont systemFontOfSize:16] titleColor:[UIColor orangeColor] contentHorAlignment:0 target:self action:@selector(hahaha)];
+    [self.view addSubview:btn];
+    
+    UITextField *textField = [UITextField new];
+    [textField setFrame:CGRectMake(100, btn.bottomY + 20, SCREEN_WIDTH - 200, 60) textFont:FontThin(19) placeholderText:@"我是placeholder" placeholderTextColor:[UIColor blueColor] placeholderTextFont:FontThin(13) tintColor:[UIColor redColor] textEntry:NO];
+    [self.view addSubview:textField];
+    
+    
+}
+-(void)hahaha{
+    NSLog(@"hahaha");
 }
 - (void)configurationEasyBlockBtn{
     UIButton *btn_1 = [UIButton buttonWithType:UIButtonTypeCustom];
