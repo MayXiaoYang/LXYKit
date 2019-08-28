@@ -1,0 +1,862 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB700D4C2315191800A6874F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D4B2315191800A6874F /* AppDelegate.m */; };
+		DB700D4F2315191800A6874F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D4E2315191800A6874F /* ViewController.m */; };
+		DB700D522315191800A6874F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB700D502315191800A6874F /* Main.storyboard */; };
+		DB700D542315191B00A6874F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB700D532315191B00A6874F /* Assets.xcassets */; };
+		DB700D572315191B00A6874F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB700D552315191B00A6874F /* LaunchScreen.storyboard */; };
+		DB700D5A2315191B00A6874F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D592315191B00A6874F /* main.m */; };
+		DB700D642315191B00A6874F /* LXYKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D632315191B00A6874F /* LXYKitTests.m */; };
+		DB700D6F2315191B00A6874F /* LXYKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D6E2315191B00A6874F /* LXYKitUITests.m */; };
+		DB700D8F23151C3200A6874F /* UIColor+LXYHex.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D7F23151C3200A6874F /* UIColor+LXYHex.m */; };
+		DB700D9023151C3200A6874F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D8223151C3200A6874F /* MBProgressHUD.m */; };
+		DB700D9123151C3200A6874F /* UIView+LXYToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D8323151C3200A6874F /* UIView+LXYToast.m */; };
+		DB700D9223151C3200A6874F /* UIView+LXYFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D8823151C3200A6874F /* UIView+LXYFrame.m */; };
+		DB700D9323151C3200A6874F /* NSString+LXYString.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D8B23151C3200A6874F /* NSString+LXYString.m */; };
+		DB700D9423151C3200A6874F /* UIView+LXYAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D8D23151C3200A6874F /* UIView+LXYAnimation.m */; };
+		DB700D9D23151C4200A6874F /* LXYAleartView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D9C23151C4200A6874F /* LXYAleartView.m */; };
+		DB700DB223151C6400A6874F /* LQCalenderDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DA123151C6400A6874F /* LQCalenderDayModel.m */; };
+		DB700DB323151C6400A6874F /* NSString+LQCalender.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DA223151C6400A6874F /* NSString+LQCalender.m */; };
+		DB700DB423151C6400A6874F /* LQCalenderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DA423151C6400A6874F /* LQCalenderCollectionViewCell.m */; };
+		DB700DB523151C6400A6874F /* LQCalenderMonthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DA523151C6400A6874F /* LQCalenderMonthModel.m */; };
+		DB700DB623151C6400A6874F /* LQCalenderWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DA623151C6400A6874F /* LQCalenderWeekView.m */; };
+		DB700DB723151C6400A6874F /* LQCalenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DAB23151C6400A6874F /* LQCalenderView.m */; };
+		DB700DB823151C6400A6874F /* LQCalenderHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DAD23151C6400A6874F /* LQCalenderHeadView.m */; };
+		DB700DB923151C6400A6874F /* LQCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DAE23151C6400A6874F /* LQCalendarViewController.m */; };
+		DB700DBA23151C6400A6874F /* NSDate+LQCalender.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DB123151C6400A6874F /* NSDate+LQCalender.m */; };
+		DB700DD523151EAB00A6874F /* EasyGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DBD23151EAB00A6874F /* EasyGCD.m */; };
+		DB700DD623151EAB00A6874F /* EasyTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DC123151EAB00A6874F /* EasyTimer.m */; };
+		DB700DD723151EAB00A6874F /* EasyEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DC223151EAB00A6874F /* EasyEmpty.m */; };
+		DB700DD823151EAB00A6874F /* EasyEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DC423151EAB00A6874F /* EasyEventHandler.m */; };
+		DB700DD923151EAB00A6874F /* EasyWeakHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DC523151EAB00A6874F /* EasyWeakHelper.m */; };
+		DB700DDA23151EAB00A6874F /* UIControl+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DCA23151EAB00A6874F /* UIControl+EasyBlock.m */; };
+		DB700DDB23151EAB00A6874F /* UIBarButtonItem+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DCB23151EAB00A6874F /* UIBarButtonItem+EasyBlock.m */; };
+		DB700DDC23151EAB00A6874F /* UIView+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DCC23151EAB00A6874F /* UIView+EasyBlock.m */; };
+		DB700DDD23151EAB00A6874F /* EasyKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DD023151EAB00A6874F /* EasyKVO.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB700D602315191B00A6874F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB700D3F2315191800A6874F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB700D462315191800A6874F;
+			remoteInfo = LXYKit;
+		};
+		DB700D6B2315191B00A6874F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB700D3F2315191800A6874F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB700D462315191800A6874F;
+			remoteInfo = LXYKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB700D472315191800A6874F /* LXYKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXYKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB700D4A2315191800A6874F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DB700D4B2315191800A6874F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DB700D4D2315191800A6874F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DB700D4E2315191800A6874F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DB700D512315191800A6874F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB700D532315191B00A6874F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB700D562315191B00A6874F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB700D582315191B00A6874F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB700D592315191B00A6874F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB700D5F2315191B00A6874F /* LXYKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LXYKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB700D632315191B00A6874F /* LXYKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYKitTests.m; sourceTree = "<group>"; };
+		DB700D652315191B00A6874F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB700D6A2315191B00A6874F /* LXYKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LXYKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB700D6E2315191B00A6874F /* LXYKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYKitUITests.m; sourceTree = "<group>"; };
+		DB700D702315191B00A6874F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB700D7C23151BA900A6874F /* LXYKitPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYKitPrefixHeader.pch; sourceTree = "<group>"; };
+		DB700D7F23151C3200A6874F /* UIColor+LXYHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LXYHex.m"; sourceTree = "<group>"; };
+		DB700D8023151C3200A6874F /* UIColor+LXYHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LXYHex.h"; sourceTree = "<group>"; };
+		DB700D8223151C3200A6874F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		DB700D8323151C3200A6874F /* UIView+LXYToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXYToast.m"; sourceTree = "<group>"; };
+		DB700D8423151C3200A6874F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		DB700D8523151C3200A6874F /* UIView+LXYToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LXYToast.h"; sourceTree = "<group>"; };
+		DB700D8723151C3200A6874F /* UIView+LXYFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LXYFrame.h"; sourceTree = "<group>"; };
+		DB700D8823151C3200A6874F /* UIView+LXYFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXYFrame.m"; sourceTree = "<group>"; };
+		DB700D8A23151C3200A6874F /* NSString+LXYString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LXYString.h"; sourceTree = "<group>"; };
+		DB700D8B23151C3200A6874F /* NSString+LXYString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LXYString.m"; sourceTree = "<group>"; };
+		DB700D8D23151C3200A6874F /* UIView+LXYAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXYAnimation.m"; sourceTree = "<group>"; };
+		DB700D8E23151C3200A6874F /* UIView+LXYAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LXYAnimation.h"; sourceTree = "<group>"; };
+		DB700D9B23151C4200A6874F /* LXYAleartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXYAleartView.h; sourceTree = "<group>"; };
+		DB700D9C23151C4200A6874F /* LXYAleartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXYAleartView.m; sourceTree = "<group>"; };
+		DB700D9F23151C6400A6874F /* LQCalenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCalenderView.h; sourceTree = "<group>"; };
+		DB700DA023151C6400A6874F /* LQCalendarHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCalendarHeader.h; sourceTree = "<group>"; };
+		DB700DA123151C6400A6874F /* LQCalenderDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCalenderDayModel.m; sourceTree = "<group>"; };
+		DB700DA223151C6400A6874F /* NSString+LQCalender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LQCalender.m"; sourceTree = "<group>"; };
+		DB700DA323151C6400A6874F /* LQCalenderHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCalenderHeadView.h; sourceTree = "<group>"; };
+		DB700DA423151C6400A6874F /* LQCalenderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCalenderCollectionViewCell.m; sourceTree = "<group>"; };
+		DB700DA523151C6400A6874F /* LQCalenderMonthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCalenderMonthModel.m; sourceTree = "<group>"; };
+		DB700DA623151C6400A6874F /* LQCalenderWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCalenderWeekView.m; sourceTree = "<group>"; };
+		DB700DA723151C6400A6874F /* LQCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCalendarViewController.h; sourceTree = "<group>"; };
+		DB700DA823151C6400A6874F /* NSDate+LQCalender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LQCalender.h"; sourceTree = "<group>"; };
+		DB700DA923151C6400A6874F /* LQCalenderDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCalenderDayModel.h; sourceTree = "<group>"; };
+		DB700DAA23151C6400A6874F /* NSString+LQCalender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LQCalender.h"; sourceTree = "<group>"; };
+		DB700DAB23151C6400A6874F /* LQCalenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCalenderView.m; sourceTree = "<group>"; };
+		DB700DAC23151C6400A6874F /* LQCalenderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCalenderCollectionViewCell.h; sourceTree = "<group>"; };
+		DB700DAD23151C6400A6874F /* LQCalenderHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCalenderHeadView.m; sourceTree = "<group>"; };
+		DB700DAE23151C6400A6874F /* LQCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQCalendarViewController.m; sourceTree = "<group>"; };
+		DB700DAF23151C6400A6874F /* LQCalenderWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCalenderWeekView.h; sourceTree = "<group>"; };
+		DB700DB023151C6400A6874F /* LQCalenderMonthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQCalenderMonthModel.h; sourceTree = "<group>"; };
+		DB700DB123151C6400A6874F /* NSDate+LQCalender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LQCalender.m"; sourceTree = "<group>"; };
+		DB700DBD23151EAB00A6874F /* EasyGCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGCD.m; sourceTree = "<group>"; };
+		DB700DBE23151EAB00A6874F /* EasyEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyEmpty.h; sourceTree = "<group>"; };
+		DB700DBF23151EAB00A6874F /* EasyEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyEventHandler.h; sourceTree = "<group>"; };
+		DB700DC023151EAB00A6874F /* EasyWeakHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyWeakHelper.h; sourceTree = "<group>"; };
+		DB700DC123151EAB00A6874F /* EasyTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyTimer.m; sourceTree = "<group>"; };
+		DB700DC223151EAB00A6874F /* EasyEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyEmpty.m; sourceTree = "<group>"; };
+		DB700DC323151EAB00A6874F /* EasyGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyGCD.h; sourceTree = "<group>"; };
+		DB700DC423151EAB00A6874F /* EasyEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyEventHandler.m; sourceTree = "<group>"; };
+		DB700DC523151EAB00A6874F /* EasyWeakHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyWeakHelper.m; sourceTree = "<group>"; };
+		DB700DC623151EAB00A6874F /* EasyTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyTimer.h; sourceTree = "<group>"; };
+		DB700DC823151EAB00A6874F /* UIView+EasyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EasyBlock.h"; sourceTree = "<group>"; };
+		DB700DC923151EAB00A6874F /* UIBarButtonItem+EasyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+EasyBlock.h"; sourceTree = "<group>"; };
+		DB700DCA23151EAB00A6874F /* UIControl+EasyBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+EasyBlock.m"; sourceTree = "<group>"; };
+		DB700DCB23151EAB00A6874F /* UIBarButtonItem+EasyBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+EasyBlock.m"; sourceTree = "<group>"; };
+		DB700DCC23151EAB00A6874F /* UIView+EasyBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EasyBlock.m"; sourceTree = "<group>"; };
+		DB700DCD23151EAB00A6874F /* UIControl+EasyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+EasyBlock.h"; sourceTree = "<group>"; };
+		DB700DCF23151EAB00A6874F /* EasyKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyKVO.h; sourceTree = "<group>"; };
+		DB700DD023151EAB00A6874F /* EasyKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyKVO.m; sourceTree = "<group>"; };
+		DB700DD123151EAB00A6874F /* EasyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyBlock.h; sourceTree = "<group>"; };
+		DB700DD323151EAB00A6874F /* EasyBlock_typedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyBlock_typedef.h; sourceTree = "<group>"; };
+		DB700DD423151EAB00A6874F /* EasyBlockHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyBlockHeader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB700D442315191800A6874F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB700D5C2315191B00A6874F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB700D672315191B00A6874F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB700D3E2315191800A6874F = {
+			isa = PBXGroup;
+			children = (
+				DB700D492315191800A6874F /* LXYKit */,
+				DB700D622315191B00A6874F /* LXYKitTests */,
+				DB700D6D2315191B00A6874F /* LXYKitUITests */,
+				DB700D482315191800A6874F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB700D482315191800A6874F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D472315191800A6874F /* LXYKit.app */,
+				DB700D5F2315191B00A6874F /* LXYKitTests.xctest */,
+				DB700D6A2315191B00A6874F /* LXYKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB700D492315191800A6874F /* LXYKit */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D4A2315191800A6874F /* AppDelegate.h */,
+				DB700D4B2315191800A6874F /* AppDelegate.m */,
+				DB700D4D2315191800A6874F /* ViewController.h */,
+				DB700D4E2315191800A6874F /* ViewController.m */,
+				DB700D7C23151BA900A6874F /* LXYKitPrefixHeader.pch */,
+				DB700D9923151C4200A6874F /* LXYView */,
+				DB700D9523151C3B00A6874F /* LXYThirdParty */,
+				DB700D7D23151C3200A6874F /* LXYTools */,
+				DB700D502315191800A6874F /* Main.storyboard */,
+				DB700D532315191B00A6874F /* Assets.xcassets */,
+				DB700D552315191B00A6874F /* LaunchScreen.storyboard */,
+				DB700D582315191B00A6874F /* Info.plist */,
+				DB700D592315191B00A6874F /* main.m */,
+			);
+			path = LXYKit;
+			sourceTree = "<group>";
+		};
+		DB700D622315191B00A6874F /* LXYKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D632315191B00A6874F /* LXYKitTests.m */,
+				DB700D652315191B00A6874F /* Info.plist */,
+			);
+			path = LXYKitTests;
+			sourceTree = "<group>";
+		};
+		DB700D6D2315191B00A6874F /* LXYKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D6E2315191B00A6874F /* LXYKitUITests.m */,
+				DB700D702315191B00A6874F /* Info.plist */,
+			);
+			path = LXYKitUITests;
+			sourceTree = "<group>";
+		};
+		DB700D7D23151C3200A6874F /* LXYTools */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D7E23151C3200A6874F /* UIColor+Hex */,
+				DB700D8123151C3200A6874F /* UIView+Toast */,
+				DB700D8623151C3200A6874F /* UIView+Frame */,
+				DB700D8923151C3200A6874F /* NSString+String */,
+				DB700D8C23151C3200A6874F /* UIView+animation */,
+			);
+			path = LXYTools;
+			sourceTree = "<group>";
+		};
+		DB700D7E23151C3200A6874F /* UIColor+Hex */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D7F23151C3200A6874F /* UIColor+LXYHex.m */,
+				DB700D8023151C3200A6874F /* UIColor+LXYHex.h */,
+			);
+			path = "UIColor+Hex";
+			sourceTree = "<group>";
+		};
+		DB700D8123151C3200A6874F /* UIView+Toast */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D8223151C3200A6874F /* MBProgressHUD.m */,
+				DB700D8323151C3200A6874F /* UIView+LXYToast.m */,
+				DB700D8423151C3200A6874F /* MBProgressHUD.h */,
+				DB700D8523151C3200A6874F /* UIView+LXYToast.h */,
+			);
+			path = "UIView+Toast";
+			sourceTree = "<group>";
+		};
+		DB700D8623151C3200A6874F /* UIView+Frame */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D8723151C3200A6874F /* UIView+LXYFrame.h */,
+				DB700D8823151C3200A6874F /* UIView+LXYFrame.m */,
+			);
+			path = "UIView+Frame";
+			sourceTree = "<group>";
+		};
+		DB700D8923151C3200A6874F /* NSString+String */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D8A23151C3200A6874F /* NSString+LXYString.h */,
+				DB700D8B23151C3200A6874F /* NSString+LXYString.m */,
+			);
+			path = "NSString+String";
+			sourceTree = "<group>";
+		};
+		DB700D8C23151C3200A6874F /* UIView+animation */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D8D23151C3200A6874F /* UIView+LXYAnimation.m */,
+				DB700D8E23151C3200A6874F /* UIView+LXYAnimation.h */,
+			);
+			path = "UIView+animation";
+			sourceTree = "<group>";
+		};
+		DB700D9523151C3B00A6874F /* LXYThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				DB700DBB23151EAB00A6874F /* EasyBlock */,
+			);
+			path = LXYThirdParty;
+			sourceTree = "<group>";
+		};
+		DB700D9923151C4200A6874F /* LXYView */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D9E23151C6400A6874F /* LQCalenderView */,
+				DB700D9A23151C4200A6874F /* LXYAleartView */,
+			);
+			path = LXYView;
+			sourceTree = "<group>";
+		};
+		DB700D9A23151C4200A6874F /* LXYAleartView */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D9B23151C4200A6874F /* LXYAleartView.h */,
+				DB700D9C23151C4200A6874F /* LXYAleartView.m */,
+			);
+			path = LXYAleartView;
+			sourceTree = "<group>";
+		};
+		DB700D9E23151C6400A6874F /* LQCalenderView */ = {
+			isa = PBXGroup;
+			children = (
+				DB700D9F23151C6400A6874F /* LQCalenderView.h */,
+				DB700DA023151C6400A6874F /* LQCalendarHeader.h */,
+				DB700DA123151C6400A6874F /* LQCalenderDayModel.m */,
+				DB700DA223151C6400A6874F /* NSString+LQCalender.m */,
+				DB700DA323151C6400A6874F /* LQCalenderHeadView.h */,
+				DB700DA423151C6400A6874F /* LQCalenderCollectionViewCell.m */,
+				DB700DA523151C6400A6874F /* LQCalenderMonthModel.m */,
+				DB700DA623151C6400A6874F /* LQCalenderWeekView.m */,
+				DB700DA723151C6400A6874F /* LQCalendarViewController.h */,
+				DB700DA823151C6400A6874F /* NSDate+LQCalender.h */,
+				DB700DA923151C6400A6874F /* LQCalenderDayModel.h */,
+				DB700DAA23151C6400A6874F /* NSString+LQCalender.h */,
+				DB700DAB23151C6400A6874F /* LQCalenderView.m */,
+				DB700DAC23151C6400A6874F /* LQCalenderCollectionViewCell.h */,
+				DB700DAD23151C6400A6874F /* LQCalenderHeadView.m */,
+				DB700DAE23151C6400A6874F /* LQCalendarViewController.m */,
+				DB700DAF23151C6400A6874F /* LQCalenderWeekView.h */,
+				DB700DB023151C6400A6874F /* LQCalenderMonthModel.h */,
+				DB700DB123151C6400A6874F /* NSDate+LQCalender.m */,
+			);
+			path = LQCalenderView;
+			sourceTree = "<group>";
+		};
+		DB700DBB23151EAB00A6874F /* EasyBlock */ = {
+			isa = PBXGroup;
+			children = (
+				DB700DBC23151EAB00A6874F /* Core */,
+				DB700DC723151EAB00A6874F /* UIKit */,
+				DB700DCE23151EAB00A6874F /* Foundation */,
+				DB700DD123151EAB00A6874F /* EasyBlock.h */,
+				DB700DD223151EAB00A6874F /* header */,
+			);
+			path = EasyBlock;
+			sourceTree = "<group>";
+		};
+		DB700DBC23151EAB00A6874F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DB700DBD23151EAB00A6874F /* EasyGCD.m */,
+				DB700DBE23151EAB00A6874F /* EasyEmpty.h */,
+				DB700DBF23151EAB00A6874F /* EasyEventHandler.h */,
+				DB700DC023151EAB00A6874F /* EasyWeakHelper.h */,
+				DB700DC123151EAB00A6874F /* EasyTimer.m */,
+				DB700DC223151EAB00A6874F /* EasyEmpty.m */,
+				DB700DC323151EAB00A6874F /* EasyGCD.h */,
+				DB700DC423151EAB00A6874F /* EasyEventHandler.m */,
+				DB700DC523151EAB00A6874F /* EasyWeakHelper.m */,
+				DB700DC623151EAB00A6874F /* EasyTimer.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DB700DC723151EAB00A6874F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				DB700DC823151EAB00A6874F /* UIView+EasyBlock.h */,
+				DB700DC923151EAB00A6874F /* UIBarButtonItem+EasyBlock.h */,
+				DB700DCA23151EAB00A6874F /* UIControl+EasyBlock.m */,
+				DB700DCB23151EAB00A6874F /* UIBarButtonItem+EasyBlock.m */,
+				DB700DCC23151EAB00A6874F /* UIView+EasyBlock.m */,
+				DB700DCD23151EAB00A6874F /* UIControl+EasyBlock.h */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		DB700DCE23151EAB00A6874F /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				DB700DCF23151EAB00A6874F /* EasyKVO.h */,
+				DB700DD023151EAB00A6874F /* EasyKVO.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		DB700DD223151EAB00A6874F /* header */ = {
+			isa = PBXGroup;
+			children = (
+				DB700DD323151EAB00A6874F /* EasyBlock_typedef.h */,
+				DB700DD423151EAB00A6874F /* EasyBlockHeader.h */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB700D462315191800A6874F /* LXYKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB700D732315191B00A6874F /* Build configuration list for PBXNativeTarget "LXYKit" */;
+			buildPhases = (
+				DB700D432315191800A6874F /* Sources */,
+				DB700D442315191800A6874F /* Frameworks */,
+				DB700D452315191800A6874F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LXYKit;
+			productName = LXYKit;
+			productReference = DB700D472315191800A6874F /* LXYKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB700D5E2315191B00A6874F /* LXYKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB700D762315191B00A6874F /* Build configuration list for PBXNativeTarget "LXYKitTests" */;
+			buildPhases = (
+				DB700D5B2315191B00A6874F /* Sources */,
+				DB700D5C2315191B00A6874F /* Frameworks */,
+				DB700D5D2315191B00A6874F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB700D612315191B00A6874F /* PBXTargetDependency */,
+			);
+			name = LXYKitTests;
+			productName = LXYKitTests;
+			productReference = DB700D5F2315191B00A6874F /* LXYKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB700D692315191B00A6874F /* LXYKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB700D792315191B00A6874F /* Build configuration list for PBXNativeTarget "LXYKitUITests" */;
+			buildPhases = (
+				DB700D662315191B00A6874F /* Sources */,
+				DB700D672315191B00A6874F /* Frameworks */,
+				DB700D682315191B00A6874F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB700D6C2315191B00A6874F /* PBXTargetDependency */,
+			);
+			name = LXYKitUITests;
+			productName = LXYKitUITests;
+			productReference = DB700D6A2315191B00A6874F /* LXYKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB700D3F2315191800A6874F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "li xiao yang";
+				TargetAttributes = {
+					DB700D462315191800A6874F = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					DB700D5E2315191B00A6874F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = DB700D462315191800A6874F;
+					};
+					DB700D692315191B00A6874F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = DB700D462315191800A6874F;
+					};
+				};
+			};
+			buildConfigurationList = DB700D422315191800A6874F /* Build configuration list for PBXProject "LXYKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB700D3E2315191800A6874F;
+			productRefGroup = DB700D482315191800A6874F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB700D462315191800A6874F /* LXYKit */,
+				DB700D5E2315191B00A6874F /* LXYKitTests */,
+				DB700D692315191B00A6874F /* LXYKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB700D452315191800A6874F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB700D572315191B00A6874F /* LaunchScreen.storyboard in Resources */,
+				DB700D542315191B00A6874F /* Assets.xcassets in Resources */,
+				DB700D522315191800A6874F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB700D5D2315191B00A6874F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB700D682315191B00A6874F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB700D432315191800A6874F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB700D4F2315191800A6874F /* ViewController.m in Sources */,
+				DB700DB823151C6400A6874F /* LQCalenderHeadView.m in Sources */,
+				DB700DDB23151EAB00A6874F /* UIBarButtonItem+EasyBlock.m in Sources */,
+				DB700DBA23151C6400A6874F /* NSDate+LQCalender.m in Sources */,
+				DB700DB723151C6400A6874F /* LQCalenderView.m in Sources */,
+				DB700DD523151EAB00A6874F /* EasyGCD.m in Sources */,
+				DB700DDD23151EAB00A6874F /* EasyKVO.m in Sources */,
+				DB700DD623151EAB00A6874F /* EasyTimer.m in Sources */,
+				DB700DDC23151EAB00A6874F /* UIView+EasyBlock.m in Sources */,
+				DB700D9D23151C4200A6874F /* LXYAleartView.m in Sources */,
+				DB700D8F23151C3200A6874F /* UIColor+LXYHex.m in Sources */,
+				DB700D9023151C3200A6874F /* MBProgressHUD.m in Sources */,
+				DB700DDA23151EAB00A6874F /* UIControl+EasyBlock.m in Sources */,
+				DB700D9423151C3200A6874F /* UIView+LXYAnimation.m in Sources */,
+				DB700DB623151C6400A6874F /* LQCalenderWeekView.m in Sources */,
+				DB700D5A2315191B00A6874F /* main.m in Sources */,
+				DB700DB323151C6400A6874F /* NSString+LQCalender.m in Sources */,
+				DB700DD923151EAB00A6874F /* EasyWeakHelper.m in Sources */,
+				DB700DB223151C6400A6874F /* LQCalenderDayModel.m in Sources */,
+				DB700D9123151C3200A6874F /* UIView+LXYToast.m in Sources */,
+				DB700D9223151C3200A6874F /* UIView+LXYFrame.m in Sources */,
+				DB700DD823151EAB00A6874F /* EasyEventHandler.m in Sources */,
+				DB700DB923151C6400A6874F /* LQCalendarViewController.m in Sources */,
+				DB700D9323151C3200A6874F /* NSString+LXYString.m in Sources */,
+				DB700D4C2315191800A6874F /* AppDelegate.m in Sources */,
+				DB700DD723151EAB00A6874F /* EasyEmpty.m in Sources */,
+				DB700DB423151C6400A6874F /* LQCalenderCollectionViewCell.m in Sources */,
+				DB700DB523151C6400A6874F /* LQCalenderMonthModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB700D5B2315191B00A6874F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB700D642315191B00A6874F /* LXYKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB700D662315191B00A6874F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB700D6F2315191B00A6874F /* LXYKitUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB700D612315191B00A6874F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB700D462315191800A6874F /* LXYKit */;
+			targetProxy = DB700D602315191B00A6874F /* PBXContainerItemProxy */;
+		};
+		DB700D6C2315191B00A6874F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB700D462315191800A6874F /* LXYKit */;
+			targetProxy = DB700D6B2315191B00A6874F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB700D502315191800A6874F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB700D512315191800A6874F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB700D552315191B00A6874F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB700D562315191B00A6874F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB700D712315191B00A6874F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DB700D722315191B00A6874F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB700D742315191B00A6874F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LXYKit/LXYKitPrefixHeader.pch";
+				INFOPLIST_FILE = LXYKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duanfang.LXYKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB700D752315191B00A6874F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LXYKit/LXYKitPrefixHeader.pch";
+				INFOPLIST_FILE = LXYKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duanfang.LXYKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB700D772315191B00A6874F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LXYKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duanfang.LXYKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LXYKit.app/LXYKit";
+			};
+			name = Debug;
+		};
+		DB700D782315191B00A6874F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LXYKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duanfang.LXYKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LXYKit.app/LXYKit";
+			};
+			name = Release;
+		};
+		DB700D7A2315191B00A6874F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LXYKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duanfang.LXYKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LXYKit;
+			};
+			name = Debug;
+		};
+		DB700D7B2315191B00A6874F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LXYKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duanfang.LXYKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LXYKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB700D422315191800A6874F /* Build configuration list for PBXProject "LXYKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB700D712315191B00A6874F /* Debug */,
+				DB700D722315191B00A6874F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB700D732315191B00A6874F /* Build configuration list for PBXNativeTarget "LXYKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB700D742315191B00A6874F /* Debug */,
+				DB700D752315191B00A6874F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB700D762315191B00A6874F /* Build configuration list for PBXNativeTarget "LXYKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB700D772315191B00A6874F /* Debug */,
+				DB700D782315191B00A6874F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB700D792315191B00A6874F /* Build configuration list for PBXNativeTarget "LXYKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB700D7A2315191B00A6874F /* Debug */,
+				DB700D7B2315191B00A6874F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB700D3F2315191800A6874F /* Project object */;
+}
