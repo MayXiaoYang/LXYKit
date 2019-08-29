@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		615E4861AC74ABD410BF572F /* libPods-LXYKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6907962D284EB66175E4B36D /* libPods-LXYKit.a */; };
 		DB56ACD7231633E200C068BF /* UILabel+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACD6231633E200C068BF /* UILabel+LXYExtension.m */; };
 		DB56ACDB2316596A00C068BF /* UIButton+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACDA2316596A00C068BF /* UIButton+LXYExtension.m */; };
 		DB56ACDF2316634900C068BF /* UITextField+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACDE2316634900C068BF /* UITextField+LXYExtension.m */; };
 		DB56ACE323166C2700C068BF /* UIView+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACE223166C2700C068BF /* UIView+LXYExtension.m */; };
 		DB56ACE723166CC000C068BF /* UIImageView+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACE623166CC000C068BF /* UIImageView+LXYExtension.m */; };
+		DB5C1F2D231762DE00739702 /* LXYScrBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C1F2C231762DE00739702 /* LXYScrBannerView.m */; };
+		DB5C1F2F2317BE7800739702 /* last.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DB5C1F2E2317BE7800739702 /* last.jpeg */; };
+		DB5C1F312317BE7D00739702 /* current.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DB5C1F302317BE7D00739702 /* current.jpeg */; };
+		DB5C1F332317BE8200739702 /* next.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DB5C1F322317BE8100739702 /* next.jpeg */; };
+		DB5C1F382317CFD100739702 /* SPCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5C1F352317CFD100739702 /* SPCarouselView.m */; };
 		DB700D4C2315191800A6874F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D4B2315191800A6874F /* AppDelegate.m */; };
 		DB700D4F2315191800A6874F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700D4E2315191800A6874F /* ViewController.m */; };
 		DB700D522315191800A6874F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB700D502315191800A6874F /* Main.storyboard */; };
@@ -65,6 +71,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D94CB299FBA017B2D2ED6F2 /* Pods-LXYKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXYKit.debug.xcconfig"; path = "Target Support Files/Pods-LXYKit/Pods-LXYKit.debug.xcconfig"; sourceTree = "<group>"; };
+		6907962D284EB66175E4B36D /* libPods-LXYKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LXYKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4208B68E8A44B3D70A2E77C /* Pods-LXYKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXYKit.release.xcconfig"; path = "Target Support Files/Pods-LXYKit/Pods-LXYKit.release.xcconfig"; sourceTree = "<group>"; };
 		DB56ACD5231633E200C068BF /* UILabel+LXYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+LXYExtension.h"; sourceTree = "<group>"; };
 		DB56ACD6231633E200C068BF /* UILabel+LXYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LXYExtension.m"; sourceTree = "<group>"; };
 		DB56ACD92316596A00C068BF /* UIButton+LXYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+LXYExtension.h"; sourceTree = "<group>"; };
@@ -75,6 +84,13 @@
 		DB56ACE223166C2700C068BF /* UIView+LXYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXYExtension.m"; sourceTree = "<group>"; };
 		DB56ACE523166CC000C068BF /* UIImageView+LXYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LXYExtension.h"; sourceTree = "<group>"; };
 		DB56ACE623166CC000C068BF /* UIImageView+LXYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LXYExtension.m"; sourceTree = "<group>"; };
+		DB5C1F2B231762DE00739702 /* LXYScrBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYScrBannerView.h; sourceTree = "<group>"; };
+		DB5C1F2C231762DE00739702 /* LXYScrBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYScrBannerView.m; sourceTree = "<group>"; };
+		DB5C1F2E2317BE7800739702 /* last.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = last.jpeg; sourceTree = "<group>"; };
+		DB5C1F302317BE7D00739702 /* current.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = current.jpeg; sourceTree = "<group>"; };
+		DB5C1F322317BE8100739702 /* next.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = next.jpeg; sourceTree = "<group>"; };
+		DB5C1F352317CFD100739702 /* SPCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCarouselView.m; sourceTree = "<group>"; };
+		DB5C1F362317CFD100739702 /* SPCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCarouselView.h; sourceTree = "<group>"; };
 		DB700D472315191800A6874F /* LXYKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXYKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB700D4A2315191800A6874F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB700D4B2315191800A6874F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -153,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				615E4861AC74ABD410BF572F /* libPods-LXYKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		395E6A45193B631765BBC90D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D94CB299FBA017B2D2ED6F2 /* Pods-LXYKit.debug.xcconfig */,
+				D4208B68E8A44B3D70A2E77C /* Pods-LXYKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DB56ACD32316337D00C068BF /* LXYKitExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +256,35 @@
 			path = "UIImageView+Extension";
 			sourceTree = "<group>";
 		};
+		DB5C1F2A231762B300739702 /* LXYScrBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				DB5C1F322317BE8100739702 /* next.jpeg */,
+				DB5C1F302317BE7D00739702 /* current.jpeg */,
+				DB5C1F2E2317BE7800739702 /* last.jpeg */,
+				DB5C1F2B231762DE00739702 /* LXYScrBannerView.h */,
+				DB5C1F2C231762DE00739702 /* LXYScrBannerView.m */,
+			);
+			path = LXYScrBannerView;
+			sourceTree = "<group>";
+		};
+		DB5C1F342317CFD100739702 /* SPCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				DB5C1F362317CFD100739702 /* SPCarouselView.h */,
+				DB5C1F352317CFD100739702 /* SPCarouselView.m */,
+				DB5C1F372317CFD100739702 /* PageControl */,
+			);
+			path = SPCarouselView;
+			sourceTree = "<group>";
+		};
+		DB5C1F372317CFD100739702 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
 		DB700D3E2315191800A6874F = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +292,8 @@
 				DB700D622315191B00A6874F /* LXYKitTests */,
 				DB700D6D2315191B00A6874F /* LXYKitUITests */,
 				DB700D482315191800A6874F /* Products */,
+				395E6A45193B631765BBC90D /* Pods */,
+				E8F783296C1CDD66F3C1F228 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,6 +315,7 @@
 				DB700D4D2315191800A6874F /* ViewController.h */,
 				DB700D4E2315191800A6874F /* ViewController.m */,
 				DB700D7C23151BA900A6874F /* LXYKitPrefixHeader.pch */,
+				DB5C1F342317CFD100739702 /* SPCarouselView */,
 				DB56ACD32316337D00C068BF /* LXYKitExtension */,
 				DB700D9923151C4200A6874F /* LXYView */,
 				DB700D9523151C3B00A6874F /* LXYThirdParty */,
@@ -359,6 +417,7 @@
 		DB700D9923151C4200A6874F /* LXYView */ = {
 			isa = PBXGroup;
 			children = (
+				DB5C1F2A231762B300739702 /* LXYScrBannerView */,
 				DB700D9E23151C6400A6874F /* LQCalenderView */,
 				DB700D9A23151C4200A6874F /* LXYAleartView */,
 			);
@@ -460,6 +519,14 @@
 			path = header;
 			sourceTree = "<group>";
 		};
+		E8F783296C1CDD66F3C1F228 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6907962D284EB66175E4B36D /* libPods-LXYKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -467,6 +534,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB700D732315191B00A6874F /* Build configuration list for PBXNativeTarget "LXYKit" */;
 			buildPhases = (
+				A9DDA1ABA72CD928B7FB2066 /* [CP] Check Pods Manifest.lock */,
 				DB700D432315191800A6874F /* Sources */,
 				DB700D442315191800A6874F /* Frameworks */,
 				DB700D452315191800A6874F /* Resources */,
@@ -563,7 +631,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5C1F332317BE8200739702 /* next.jpeg in Resources */,
 				DB700D572315191B00A6874F /* LaunchScreen.storyboard in Resources */,
+				DB5C1F2F2317BE7800739702 /* last.jpeg in Resources */,
+				DB5C1F312317BE7D00739702 /* current.jpeg in Resources */,
 				DB700D542315191B00A6874F /* Assets.xcassets in Resources */,
 				DB700D522315191800A6874F /* Main.storyboard in Resources */,
 			);
@@ -585,6 +656,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A9DDA1ABA72CD928B7FB2066 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LXYKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB700D432315191800A6874F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -598,6 +694,7 @@
 				DB700DD523151EAB00A6874F /* EasyGCD.m in Sources */,
 				DB56ACE723166CC000C068BF /* UIImageView+LXYExtension.m in Sources */,
 				DB700DDD23151EAB00A6874F /* EasyKVO.m in Sources */,
+				DB5C1F382317CFD100739702 /* SPCarouselView.m in Sources */,
 				DB56ACD7231633E200C068BF /* UILabel+LXYExtension.m in Sources */,
 				DB700DD623151EAB00A6874F /* EasyTimer.m in Sources */,
 				DB700DDC23151EAB00A6874F /* UIView+EasyBlock.m in Sources */,
@@ -605,6 +702,7 @@
 				DB700D8F23151C3200A6874F /* UIColor+LXYHex.m in Sources */,
 				DB700D9023151C3200A6874F /* MBProgressHUD.m in Sources */,
 				DB56ACDF2316634900C068BF /* UITextField+LXYExtension.m in Sources */,
+				DB5C1F2D231762DE00739702 /* LXYScrBannerView.m in Sources */,
 				DB56ACE323166C2700C068BF /* UIView+LXYExtension.m in Sources */,
 				DB700DDA23151EAB00A6874F /* UIControl+EasyBlock.m in Sources */,
 				DB700D9423151C3200A6874F /* UIView+LXYAnimation.m in Sources */,
@@ -791,6 +889,7 @@
 		};
 		DB700D742315191B00A6874F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D94CB299FBA017B2D2ED6F2 /* Pods-LXYKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -809,6 +908,7 @@
 		};
 		DB700D752315191B00A6874F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4208B68E8A44B3D70A2E77C /* Pods-LXYKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

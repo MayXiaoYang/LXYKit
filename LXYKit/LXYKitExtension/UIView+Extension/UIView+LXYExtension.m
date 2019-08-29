@@ -12,7 +12,7 @@
 
 - (void)setFrame:(CGRect)frame backgroundColor:(UIColor *)backgroundColor{
     self.frame = frame;
-    if (self.backgroundColor) {
+    if (backgroundColor) {
         self.backgroundColor = backgroundColor;
     }
 }

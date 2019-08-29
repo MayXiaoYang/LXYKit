@@ -1,0 +1,6 @@
+platform :ios,'9.0'
+target "LXYKit" do
+
+pod 'SDWebImage', '~> 5.1.0'
+
+end

@@ -20,7 +20,7 @@
     if (image) {
         self.image = image;
     }
-    if (self.backgroundColor) {
+    if (backgroundColor) {
         self.backgroundColor = backgroundColor;
     }
 }

@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "LQCalenderView.h"
 #import "LXYAleartView.h"
+#import "LXYScrBannerView.h"
+#import "SPCarouselView.h"
 
 @interface ViewController ()
 @property (nonatomic, assign)NSInteger num;
@@ -22,7 +24,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self configurationCalendarView];
+//    [self configurationCalendarView];
     
 //    [self configurationEasyBlockBtn];
     
@@ -31,16 +33,24 @@
     
     UILabel *label = [UILabel new];
     [label setFrame:CGRectMake(100, 300, SCREEN_WIDTH - 200, 60) text:@"天下无贼" textColor:[UIColor redColor] textFont:[UIFont systemFontOfSize:16]];
-    [self.view addSubview:label];
+//    [self.view addSubview:label];
     
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setFrame:CGRectMake(100, label.bottomY + 20, SCREEN_WIDTH - 200, 60) title:@"哈哈哈哈" titleFont:[UIFont systemFontOfSize:16] titleColor:[UIColor orangeColor] contentHorAlignment:0 target:self action:@selector(hahaha)];
-    [self.view addSubview:btn];
+//    [self.view addSubview:btn];
     
     UITextField *textField = [UITextField new];
     [textField setFrame:CGRectMake(100, btn.bottomY + 20, SCREEN_WIDTH - 200, 60) textFont:FontThin(19) placeholderText:@"我是placeholder" placeholderTextColor:[UIColor blueColor] placeholderTextFont:FontThin(13) tintColor:[UIColor redColor] textEntry:NO];
-    [self.view addSubview:textField];
+//    [self.view addSubview:textField];
+    
+    LXYScrBannerView *bannerView = [[LXYScrBannerView alloc]initWithFrame:CGRectMake(40, navgationBarH + 100, SCREEN_WIDTH - 80, 160)];
+//    bannerView.locationImages = @[[UIImage imageNamed:@"last.jpeg"],[UIImage imageNamed:@"current.jpeg"],[UIImage imageNamed:@"next.jpeg"],[UIImage imageNamed:@"last.jpeg"],[UIImage imageNamed:@"current.jpeg"],[UIImage imageNamed:@"next.jpeg"]];
+    [self.view addSubview:bannerView];
+    
+//    SPCarouselView *banner = [[SPCarouselView alloc]initWithFrame:CGRectMake(40, navgationBarH + 100, SCREEN_WIDTH - 80, 160)];
+//    banner.localImages = @[@"last.jpeg",@"current.jpeg",@"next.jpeg"];
+//    [self.view addSubview:banner];
     
     
 }
