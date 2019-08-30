@@ -12,7 +12,7 @@
 
 
 #import "LXYScrBannerView.h"
-
+#import <UIImageView+WebCache.h>
 typedef enum : NSUInteger {
     LXYScrBannerViewImagesLocation,  //本地图片
     LXYScrBannerViewImagesNetWork,   //网络图片
@@ -25,12 +25,11 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong)UIImageView *lastImageView;
 @property (nonatomic, strong)UIImageView *currentImageView;
 @property (nonatomic, strong)UIImageView *nextImageView;
+@property (nonatomic, strong)UIPageControl *pageControl;
 
 @property (nonatomic, assign)NSInteger lastPageIndex;
 @property (nonatomic, assign)NSInteger currentPageIndex;
 @property (nonatomic, assign)NSInteger nextPageIndex;
-
-@property (nonatomic, copy)NSArray *colorArr;
 
 @property (nonatomic, assign)NSInteger imagsCount;//图片数组元素个数
 
@@ -48,9 +47,10 @@ typedef enum : NSUInteger {
     return self;
 }
 - (void)initDefaultData{
-    self.locationImages = @[@"last.jpeg",@"current.jpeg",@"next.jpeg"];
-    self.imagsCount = self.locationImages.count;
-    [self configurationUI];
+    _currentPageColor = [UIColor whiteColor];
+    _pageColor = [UIColor lightGrayColor];
+    _pageControlLocationType = LXYLocationBottomCenter;
+    
 }
 #pragma mark ------- 懒加载
 - (UIScrollView *)imgScrollView{
@@ -91,6 +91,15 @@ typedef enum : NSUInteger {
     return _nextImageView;
 }
 
+- (UIPageControl *)pageControl{
+    if (!_pageControl) {
+        _pageControl = [[UIPageControl alloc]init];
+        _pageControl.currentPageIndicatorTintColor = _currentPageColor;
+        _pageControl.pageIndicatorTintColor =_pageColor;
+        [self addSubview:_pageControl];
+    }
+    return _pageControl;
+}
 #pragma mark ------- configurationUI
 - (void)configurationUI{
     
@@ -105,18 +114,22 @@ typedef enum : NSUInteger {
     [self.imgScrollView addSubview:self.nextImageView];    
     
     // 将上一张图片设置为数组中最后一张图片
-    [self setImageView:_lastImageView withSubscript:(_imagsCount-1)];
+    [self setImageWithImageView:_lastImageView withPageIndex:(_imagsCount-1)];
     // 将当前图片设置为数组中第一张图片
-    [self setImageView:_currentImageView withSubscript:0];
-    
+    [self setImageWithImageView:_currentImageView withPageIndex:0];
     // 将下一张图片设置为数组中第二张图片,如果数组只有一张图片，则上、中、下图片全部是数组中的第一张图片
-    [self setImageView:_nextImageView withSubscript:_imagsCount == 1 ? 0 : 1];
+    [self setImageWithImageView:_nextImageView withPageIndex:_imagsCount == 1 ? 0 : 1];
     
     self.imgScrollView.contentSize = CGSizeMake(ScrWidth*3, ScrHeight);
     self.imgScrollView.contentOffset = CGPointMake(ScrWidth, 0);
     
     self.nextPageIndex = 1;
     self.lastPageIndex = _imagsCount - 1;
+    
+    self.pageControl.numberOfPages = _imagsCount;
+    self.pageControl.currentPage = 0;
+//    self.pageControlLocationType = self.pageControlLocationType;
+    [self setPageControlLocationType:self.pageControlLocationType];
     
     [self setSubviewsFrame];
     
@@ -147,10 +160,8 @@ typedef enum : NSUInteger {
                 _nextPageIndex--;
             }
         }
-        [self setImageView:_lastImageView withSubscript:_lastPageIndex];
-
-    }
-    if (ceil(scrollView.contentOffset.x) >= 2 * ScrWidth){
+        [self setImageWithImageView:_lastImageView withPageIndex:_lastPageIndex];
+    }else if (ceil(scrollView.contentOffset.x) >= 2 * ScrWidth){
         //滑到最后一张继续左滑
         _lastImageView.image = _currentImageView.image;
         _currentImageView.image = _nextImageView.image;
@@ -167,31 +178,68 @@ typedef enum : NSUInteger {
                 _lastPageIndex ++;
             }
         }
-        [self setImageView:_nextImageView withSubscript:_nextPageIndex];
+        [self setImageWithImageView:_nextImageView withPageIndex:_nextPageIndex];
+    }
+    
+    if (_lastPageIndex + 1 == _imagsCount) {
+        self.pageControl.currentPage = _imagsCount - 1;
+    }else{
+        self.pageControl.currentPage = _lastPageIndex + 1;
     }
 }
 
--(void)setImageView:(UIImageView *)imgView withSubscript:(NSInteger)subcript{
-//    if (self.carouseImagesStyle == SPCarouseImagesDataInLocal) {
-//        if (self.localImages.count < 1) {
-//            return;
-//        }
-//        imgView.image = [UIImage imageNamed:self.localImages[subcript]];
-//    } else{
-//        //网络图片设置, 如果要使用占位图请自行修改
-//        [imgView sd_setImageWithURL:[NSURL URLWithString:self.urlImages[subcript]] placeholderImage:nil];
-//    }
-    imgView.image = [UIImage imageNamed:self.locationImages[subcript]];
+- (void)setImageWithImageView:(UIImageView *)imageView withPageIndex:(NSInteger)pageIndex{
+    if (self.imagesType == LXYScrBannerViewImagesLocation) {
+        //本地图片加载
+        if (self.locationImages.count ==0)return;
+        imageView.image = [UIImage imageNamed:self.locationImages[pageIndex]];
+    }else{
+        //网络加载
+        [imageView sd_setImageWithURL:[NSURL URLWithString:self.imageUrls[pageIndex]] placeholderImage:nil];//此处可设置占位图
+    }
 }
 
 #pragma mark ------- setter
+//加载本地图片
 - (void)setLocationImages:(NSArray<NSString *> *)locationImages{
     if (locationImages.count == 0)return;
-    
+    _locationImages = locationImages.copy;
     self.imagsCount = locationImages.count;
-    NSLog(@"imagsCount---->>>%ld",locationImages.count);
     self.imagesType = LXYScrBannerViewImagesLocation;
     [self configurationUI];
+    
+}
+//加载网络图片
+- (void)setImageUrls:(NSMutableArray<NSString *> *)imageUrls{
+    if (imageUrls.count == 0) return;
+    _imageUrls = imageUrls.mutableCopy;
+    self.imagsCount = imageUrls.count;
+    self.imagesType = LXYScrBannerViewImagesNetWork;
+    [self configurationUI];
+}
+- (void)setIsPageControlHidden:(BOOL)isPageControlHidden{
+    _pageControl.hidden = isPageControlHidden;
+}
+
+- (void)setPageControlLocationType:(pageControlLocationType)pageControlLocationType{
+    
+    CGSize size = [self.pageControl sizeForNumberOfPages:_imagsCount];
+    
+    _pageControl.frame = CGRectMake(0, 0, size.width, size.height);
+
+    switch (pageControlLocationType) {
+        case LXYLocationBottomCenter:
+            _pageControl.center = self.center;
+            break;
+        case LXYLocationBottomLeft:
+            _pageControl.frame = CGRectMake(15, ScrHeight - size.height - 20, size.width, size.height);
+            break;
+        case LXYLocationBottomRight:
+            _pageControl.frame = CGRectMake(ScrWidth - 15 - size.width, ScrHeight - size.height - 20, size.width, size.height);
+            break;
+        default:
+            break;
+    }
 }
 @end
 

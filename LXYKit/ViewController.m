@@ -45,12 +45,11 @@
 //    [self.view addSubview:textField];
     
     LXYScrBannerView *bannerView = [[LXYScrBannerView alloc]initWithFrame:CGRectMake(40, navgationBarH + 100, SCREEN_WIDTH - 80, 160)];
-//    bannerView.locationImages = @[[UIImage imageNamed:@"last.jpeg"],[UIImage imageNamed:@"current.jpeg"],[UIImage imageNamed:@"next.jpeg"],[UIImage imageNamed:@"last.jpeg"],[UIImage imageNamed:@"current.jpeg"],[UIImage imageNamed:@"next.jpeg"]];
+    bannerView.locationImages = @[@"last.jpeg",@"current.jpeg",@"next.jpeg"];
+    bannerView.imageUrls = @[@"http://pic1.win4000.com/wallpaper/4/5137fa512ac1b.jpg",@"http://b-ssl.duitang.com/uploads/item/201406/04/20140604212746_fmECf.jpeg",@"http://b-ssl.duitang.com/uploads/item/201406/04/20140604212835_EysSy.jpeg"].mutableCopy;
     [self.view addSubview:bannerView];
     
-//    SPCarouselView *banner = [[SPCarouselView alloc]initWithFrame:CGRectMake(40, navgationBarH + 100, SCREEN_WIDTH - 80, 160)];
-//    banner.localImages = @[@"last.jpeg",@"current.jpeg",@"next.jpeg"];
-//    [self.view addSubview:banner];
+
     
     
 }
