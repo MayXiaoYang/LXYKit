@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger,pageControlLocationType){
-    LXYLocationBottomCenter = 0,
-    LXYLocationBottomLeft,
-    LXYLocationBottomRight,
+    LXYLocationBottomCenter = 0,  //控件底部中间
+    LXYLocationBottomLeft,        //控件底部左侧
+    LXYLocationBottomRight,       //控件底部右侧
 };
 
 @interface LXYScrBannerView : UIView
@@ -22,17 +22,20 @@ typedef NS_ENUM(NSInteger,pageControlLocationType){
 /** 网络图片url数组 */
 @property (nonatomic, strong)NSMutableArray <NSString *>*imageUrls;
 
-/** pageControl当前小圆点的颜色 */
+/** pageControl当前小圆点的颜色 默认白色*/
 @property (nonatomic, strong)UIColor *currentPageColor;
 
-/** 其他小圆点的颜色 */
+/** 其他小圆点的颜色 默认轻灰色*/
 @property (nonatomic, strong)UIColor *pageColor;
 
-/** 是否显示pageControl */
+/** 是否显示pageControl 默认显示*/
 @property (nonatomic, assign)BOOL isPageControlHidden;
 
-/** pageControl的位置 */
+/** pageControl的位置 默认底部中间*/
 @property (nonatomic, assign)pageControlLocationType pageControlLocationType;
+
+/** 设置placeholderImage 默认无占位图*/
+@property (nonatomic, copy)NSString *placeholderImage;
 
 
 

@@ -128,7 +128,6 @@ typedef enum : NSUInteger {
     
     self.pageControl.numberOfPages = _imagsCount;
     self.pageControl.currentPage = 0;
-//    self.pageControlLocationType = self.pageControlLocationType;
     [self setPageControlLocationType:self.pageControlLocationType];
     
     [self setSubviewsFrame];
@@ -181,10 +180,15 @@ typedef enum : NSUInteger {
         [self setImageWithImageView:_nextImageView withPageIndex:_nextPageIndex];
     }
     
-    if (_lastPageIndex + 1 == _imagsCount) {
+//    if (_lastPageIndex + 1 == _imagsCount) {
+//        self.pageControl.currentPage = _imagsCount - 1;
+//    }else{
+//        self.pageControl.currentPage = _lastPageIndex + 1;
+//    }
+    if (_nextPageIndex - 1 < 0) {
         self.pageControl.currentPage = _imagsCount - 1;
-    }else{
-        self.pageControl.currentPage = _lastPageIndex + 1;
+    } else {
+        self.pageControl.currentPage = _nextPageIndex - 1;
     }
 }
 
@@ -195,7 +199,12 @@ typedef enum : NSUInteger {
         imageView.image = [UIImage imageNamed:self.locationImages[pageIndex]];
     }else{
         //网络加载
-        [imageView sd_setImageWithURL:[NSURL URLWithString:self.imageUrls[pageIndex]] placeholderImage:nil];//此处可设置占位图
+        if (_placeholderImage) {
+            [imageView sd_setImageWithURL:[NSURL URLWithString:self.imageUrls[pageIndex]] placeholderImage:[UIImage imageNamed:_placeholderImage]];
+        }else{
+            [imageView sd_setImageWithURL:[NSURL URLWithString:self.imageUrls[pageIndex]] placeholderImage:nil];
+        }
+        
     }
 }
 
@@ -222,20 +231,20 @@ typedef enum : NSUInteger {
 }
 
 - (void)setPageControlLocationType:(pageControlLocationType)pageControlLocationType{
-    
+    //拉到self的最前方，防止遮挡。
+    [self bringSubviewToFront:_pageControl];
+    //计算pageControl的size
     CGSize size = [self.pageControl sizeForNumberOfPages:_imagsCount];
     
-    _pageControl.frame = CGRectMake(0, 0, size.width, size.height);
-
     switch (pageControlLocationType) {
-        case LXYLocationBottomCenter:
-            _pageControl.center = self.center;
+        case LXYLocationBottomCenter://控件底部中间
+            _pageControl.frame = CGRectMake((ScrWidth - size.width)/2, ScrHeight - size.height, size.width, size.height);
             break;
-        case LXYLocationBottomLeft:
-            _pageControl.frame = CGRectMake(15, ScrHeight - size.height - 20, size.width, size.height);
+        case LXYLocationBottomLeft://控件底部左侧
+            _pageControl.frame = CGRectMake(15, ScrHeight - size.height, size.width, size.height);
             break;
-        case LXYLocationBottomRight:
-            _pageControl.frame = CGRectMake(ScrWidth - 15 - size.width, ScrHeight - size.height - 20, size.width, size.height);
+        case LXYLocationBottomRight://控件底部右侧
+            _pageControl.frame = CGRectMake(ScrWidth - 15 - size.width, ScrHeight - size.height, size.width, size.height);
             break;
         default:
             break;
