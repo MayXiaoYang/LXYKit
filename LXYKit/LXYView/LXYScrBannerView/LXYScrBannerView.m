@@ -34,6 +34,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign)NSInteger imagsCount;//图片数组元素个数
 
 @property (nonatomic, assign)LXYScrBannerViewImagesType imagesType;
+@property (nonatomic, strong)NSTimer *timer;
 
 @end
 
@@ -50,7 +51,8 @@ typedef enum : NSUInteger {
     _currentPageColor = [UIColor whiteColor];
     _pageColor = [UIColor lightGrayColor];
     _pageControlLocationType = LXYLocationBottomCenter;
-    
+    _autoScr = YES;
+    _autoScrduration = 2.0f;
 }
 #pragma mark ------- 懒加载
 - (UIScrollView *)imgScrollView{
@@ -63,6 +65,7 @@ typedef enum : NSUInteger {
         _imgScrollView.layer.masksToBounds = YES;
         _imgScrollView.showsHorizontalScrollIndicator = NO;
         _imgScrollView.showsVerticalScrollIndicator = NO;
+        _imgScrollView.clipsToBounds = YES;
     }
     return _imgScrollView;
 }
@@ -71,6 +74,7 @@ typedef enum : NSUInteger {
     if (!_lastImageView) {
         _lastImageView = [[UIImageView alloc]init];
         _lastImageView.backgroundColor = [UIColor lightGrayColor];
+        _lastImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _lastImageView;
 }
@@ -79,6 +83,7 @@ typedef enum : NSUInteger {
     if (!_currentImageView) {
         _currentImageView = [[UIImageView alloc]init];
         _currentImageView.backgroundColor = [UIColor lightGrayColor];
+        _currentImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _currentImageView;
 }
@@ -87,6 +92,7 @@ typedef enum : NSUInteger {
     if (!_nextImageView) {
         _nextImageView = [[UIImageView alloc]init];
         _nextImageView.backgroundColor = [UIColor lightGrayColor];
+        _nextImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _nextImageView;
 }
@@ -180,15 +186,10 @@ typedef enum : NSUInteger {
         [self setImageWithImageView:_nextImageView withPageIndex:_nextPageIndex];
     }
     
-//    if (_lastPageIndex + 1 == _imagsCount) {
-//        self.pageControl.currentPage = _imagsCount - 1;
-//    }else{
-//        self.pageControl.currentPage = _lastPageIndex + 1;
-//    }
-    if (_nextPageIndex - 1 < 0) {
-        self.pageControl.currentPage = _imagsCount - 1;
-    } else {
-        self.pageControl.currentPage = _nextPageIndex - 1;
+    if (_lastPageIndex + 1 == _imagsCount) {
+        self.pageControl.currentPage = 0;
+    }else{
+        self.pageControl.currentPage = _lastPageIndex + 1;
     }
 }
 
@@ -216,6 +217,7 @@ typedef enum : NSUInteger {
     self.imagsCount = locationImages.count;
     self.imagesType = LXYScrBannerViewImagesLocation;
     [self configurationUI];
+    [self openTimer];
     
 }
 //加载网络图片
@@ -225,6 +227,7 @@ typedef enum : NSUInteger {
     self.imagsCount = imageUrls.count;
     self.imagesType = LXYScrBannerViewImagesNetWork;
     [self configurationUI];
+    [self openTimer];
 }
 - (void)setIsPageControlHidden:(BOOL)isPageControlHidden{
     _pageControl.hidden = isPageControlHidden;
@@ -250,6 +253,87 @@ typedef enum : NSUInteger {
             break;
     }
 }
+#pragma mark ------- 自动轮播方法
+-(void)setAutoScrduration:(NSInteger)autoScrduration{
+    _autoScrduration = autoScrduration;
+    if (_autoScrduration < 1.0f) {
+        _autoScrduration = 2.0f;
+    }
+    if (_autoScr) {
+        [self openTimer];
+    }
+}
+
+- (void)setAutoScr:(BOOL)autoScr{
+    _autoScr = autoScr;
+    if (autoScr) {
+        [self openTimer];
+    }else{
+        [self closeTimer];
+    }
+}
+
+// 开启定时器
+- (void)openTimer {
+    // 开启之前一定要先将上一次开启的定时器关闭,否则会跟新的定时器重叠
+    [self closeTimer];
+    if (_autoScr) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:self.autoScrduration target:self selector:@selector(timerAction) userInfo:self repeats:YES];
+        // 当外界滑动其他scrollView时，主线程的RunLoop会切换到UITrackingRunLoopMode这个Mode，执行的也是UITrackingRunLoopMode下的任务（Mode中的item），而timer是添加在NSDefaultRunLoopMode下的，所以timer任务并不会执行，只有当UITrackingRunLoopMode的任务执行完毕，runloop切换到NSDefaultRunLoopMode后，才会继续执行timer事件.
+        // 因此，要保证timer事件不中断，就必须把_timer加入到NSRunLoopCommonModes模式下的 RunLoop中。也可以加入到UITrackingRunLoopMode
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
+}
+
+// 关闭定时器
+- (void)closeTimer {
+    [_timer invalidate];
+    _timer = nil;
+}
+
+// timer事件
+- (void)timerAction{
+    // 定时器每次触发都让当前图片为轮播图的第三张ImageView的image
+    [_imgScrollView setContentOffset:CGPointMake(ScrWidth*2, 0) animated:YES];
+}
+
+// 用户将要拖拽时将定时器关闭
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    // 关闭定时器
+    [self closeTimer];
+}
+
+// 用户结束拖拽时将定时器开启(在打开自动轮播的前提下)
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (self.autoScr) {
+        [self openTimer];
+    }
+}
+
+#pragma mark ------- 设置图片显示mode
+- (void)setImageModeType:(imageViewContentModeType)imageModeType{
+    _imageModeType = imageModeType;
+    switch (imageModeType) {
+        case LXYImageViewContentModeScaleToFill:
+            _lastImageView.contentMode = _currentImageView.contentMode = _nextImageView.contentMode = UIViewContentModeScaleToFill;
+            break;
+        case LXYImageViewContentModeScaleAspectFit:
+            _lastImageView.contentMode = _currentImageView.contentMode = _nextImageView.contentMode = UIViewContentModeScaleAspectFit;
+            break;
+        case LXYImageViewContentModeScaleAspectFill:
+            _lastImageView.contentMode = _currentImageView.contentMode = _nextImageView.contentMode = UIViewContentModeScaleAspectFill;
+            break;
+        default:
+            break;
+    }
+    
+}
+
+- (void)setScrCornerRadius:(CGFloat)ScrCornerRadius{
+    _imgScrollView.layer.masksToBounds = YES;
+    _imgScrollView.layer.cornerRadius = ScrCornerRadius;
+}
 @end
+
 
 

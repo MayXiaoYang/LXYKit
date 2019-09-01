@@ -14,6 +14,12 @@ typedef NS_ENUM(NSInteger,pageControlLocationType){
     LXYLocationBottomRight,       //控件底部右侧
 };
 
+typedef NS_ENUM(NSInteger,imageViewContentModeType){
+    LXYImageViewContentModeScaleToFill = 0,    // 默认,充满父控件
+    LXYImageViewContentModeScaleAspectFit,     // 按图片比例显示,少于父控件的部分会留有空白
+    LXYImageViewContentModeScaleAspectFill,    // 按图片比例显示,超出父控件的部分会被剪掉
+};
+
 @interface LXYScrBannerView : UIView
 
 /** 本地图片数组 */
@@ -36,6 +42,17 @@ typedef NS_ENUM(NSInteger,pageControlLocationType){
 
 /** 设置placeholderImage 默认无占位图*/
 @property (nonatomic, copy)NSString *placeholderImage;
+
+/** 是否自动轮播 default is YES */
+@property (nonatomic, assign)BOOL autoScr;
+
+/** 轮播间隔时间 */
+@property (nonatomic, assign)NSInteger autoScrduration;
+
+@property (nonatomic, assign)imageViewContentModeType imageModeType;
+
+/** 设置圆角 */
+@property (nonatomic, assign)CGFloat ScrCornerRadius;
 
 
 

@@ -48,6 +48,9 @@
     bannerView.locationImages = @[@"last.jpeg",@"current.jpeg",@"next.jpeg"];
     bannerView.imageUrls = @[@"http://pic1.win4000.com/wallpaper/4/5137fa512ac1b.jpg",@"http://b-ssl.duitang.com/uploads/item/201406/04/20140604212746_fmECf.jpeg",@"http://b-ssl.duitang.com/uploads/item/201406/04/20140604212835_EysSy.jpeg"].mutableCopy;
     bannerView.pageControlLocationType = LXYLocationBottomCenter;
+    bannerView.autoScr = YES;
+    bannerView.autoScrduration = 2.0f;
+    bannerView.ScrCornerRadius = 5*WidthRatio;
     [self.view addSubview:bannerView];
     
 
