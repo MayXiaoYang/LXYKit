@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger,imageViewContentModeType){
     LXYImageViewContentModeScaleAspectFit,     // 按图片比例显示,少于父控件的部分会留有空白
     LXYImageViewContentModeScaleAspectFill,    // 按图片比例显示,超出父控件的部分会被剪掉
 };
-
+@protocol LXYScrBannerViewDelegate;
 @interface LXYScrBannerView : UIView
 
 /** 本地图片数组 */
@@ -54,9 +54,17 @@ typedef NS_ENUM(NSInteger,imageViewContentModeType){
 /** 设置圆角 */
 @property (nonatomic, assign)CGFloat ScrCornerRadius;
 
+/** 设置点击图片的回调 默认block回调，如果block，代理都存在，默认 */
+@property (nonatomic, copy)void(^didTapImageBlock)(NSInteger pageIndex);
+
+@property (nonatomic, weak)id <LXYScrBannerViewDelegate> delegate;
 
 
+@end
 
+@protocol LXYScrBannerViewDelegate <NSObject>
+
+-(void)didSelectedImageView:(UIImageView *)imageView withPageIndex:(NSInteger)pageIndex;
 
 @end
 

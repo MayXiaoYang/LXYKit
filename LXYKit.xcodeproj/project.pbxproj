@@ -51,6 +51,7 @@
 		DB700DDB23151EAB00A6874F /* UIBarButtonItem+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DCB23151EAB00A6874F /* UIBarButtonItem+EasyBlock.m */; };
 		DB700DDC23151EAB00A6874F /* UIView+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DCC23151EAB00A6874F /* UIView+EasyBlock.m */; };
 		DB700DDD23151EAB00A6874F /* EasyKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DD023151EAB00A6874F /* EasyKVO.m */; };
+		DB87F49923238DFA00774EE7 /* LXYCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB87F49823238DFA00774EE7 /* LXYCountDownView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,8 @@
 		DB700DD123151EAB00A6874F /* EasyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyBlock.h; sourceTree = "<group>"; };
 		DB700DD323151EAB00A6874F /* EasyBlock_typedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyBlock_typedef.h; sourceTree = "<group>"; };
 		DB700DD423151EAB00A6874F /* EasyBlockHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyBlockHeader.h; sourceTree = "<group>"; };
+		DB87F49723238DFA00774EE7 /* LXYCountDownView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYCountDownView.h; sourceTree = "<group>"; };
+		DB87F49823238DFA00774EE7 /* LXYCountDownView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYCountDownView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +420,7 @@
 		DB700D9923151C4200A6874F /* LXYView */ = {
 			isa = PBXGroup;
 			children = (
+				DB87F49623238DE300774EE7 /* LXYCountDownView */,
 				DB5C1F2A231762B300739702 /* LXYScrBannerView */,
 				DB700D9E23151C6400A6874F /* LQCalenderView */,
 				DB700D9A23151C4200A6874F /* LXYAleartView */,
@@ -517,6 +521,15 @@
 				DB700DD423151EAB00A6874F /* EasyBlockHeader.h */,
 			);
 			path = header;
+			sourceTree = "<group>";
+		};
+		DB87F49623238DE300774EE7 /* LXYCountDownView */ = {
+			isa = PBXGroup;
+			children = (
+				DB87F49723238DFA00774EE7 /* LXYCountDownView.h */,
+				DB87F49823238DFA00774EE7 /* LXYCountDownView.m */,
+			);
+			path = LXYCountDownView;
 			sourceTree = "<group>";
 		};
 		E8F783296C1CDD66F3C1F228 /* Frameworks */ = {
@@ -720,6 +733,7 @@
 				DB700D4C2315191800A6874F /* AppDelegate.m in Sources */,
 				DB700DD723151EAB00A6874F /* EasyEmpty.m in Sources */,
 				DB700DB423151C6400A6874F /* LQCalenderCollectionViewCell.m in Sources */,
+				DB87F49923238DFA00774EE7 /* LXYCountDownView.m in Sources */,
 				DB700DB523151C6400A6874F /* LQCalenderMonthModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

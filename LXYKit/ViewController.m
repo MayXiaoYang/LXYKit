@@ -11,9 +11,10 @@
 #import "LXYAleartView.h"
 #import "LXYScrBannerView.h"
 #import "SPCarouselView.h"
-
-@interface ViewController ()
+#import "LXYCountDownView.h"
+@interface ViewController ()<LXYScrBannerViewDelegate>
 @property (nonatomic, assign)NSInteger num;
+@property (nonatomic, strong)LXYCountDownView *countDownView;
 @end
 
 @implementation ViewController
@@ -51,9 +52,65 @@
     bannerView.autoScr = YES;
     bannerView.autoScrduration = 2.0f;
     bannerView.ScrCornerRadius = 5*WidthRatio;
+//    bannerView.didTapImageBlock = ^(NSInteger pageIndex) {
+//        [self.view lxy_showBottomTextToastWithString:[NSString stringWithFormat:@"点击了第%ld张图片",pageIndex]];
+//    };
+    bannerView.delegate = self;
     [self.view addSubview:bannerView];
     
 
+    LXYCountDownView *countDownView = [[LXYCountDownView alloc]initWithFrame:CGRectMake(0, bannerView.bottomY + 49, 160, 40)];
+    countDownView.backgroundColor = [UIColor orangeColor];
+    countDownView.centerX = self.view.centerX;
+    countDownView.day = 1;
+    countDownView.hour = 0;
+    countDownView.minute = 0;
+    countDownView.second = 9;
+    countDownView.complete = ^{
+        [self.view lxy_showBottomTextToastWithString:@"倒计时已结束！"];
+    };
+    __weak typeof(countDownView) weakCountDownView = countDownView;
+    countDownView.timeChangeBlock = ^(NSInteger day) {
+        if (day == 0) {
+            weakCountDownView.width = 120;
+        }else{
+            weakCountDownView.width = 160;
+        }
+        weakCountDownView.centerX = self.view.centerX;
+    };
+    countDownView.autoAdaptiveWidth = NO;
+    [self.view addSubview:countDownView];
+    [countDownView setFire];
+    self.countDownView = countDownView;
+    
+    
+    NSString *str;
+    str = @"1";
+    NSLog(@"%p,%@",str,str);
+    str = @"10086";
+    NSLog(@"%p,%@",str,str);
+    
+    NSMutableString *mutableStr = [[NSMutableString alloc]initWithCapacity:0];
+    [mutableStr appendString:@"hello"];
+    NSLog(@"%p,%@",mutableStr,mutableStr);
+    [mutableStr appendString:@"world"];
+    NSLog(@"%p,%@",mutableStr,mutableStr);
+    
+    int a = 6;
+    NSLog(@"%p,%d",@(a),a);
+    a = 7;
+    NSLog(@"%p,%d",@(a),a);
+    
+    switch (a) {
+        case 10:
+        case 11:
+        case 12:
+        case 7:
+            NSLog(@"hahhahaha");
+            break;
+        default:
+            break;
+    }
     
     
 }
@@ -126,6 +183,18 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.view lxy_hideToat];
     });
+}
+
+-(void)didSelectedImageView:(UIImageView *)imageView withPageIndex:(NSInteger)pageIndex{
+    [self.view lxy_showBottomTextToastWithString:[NSString stringWithFormat:@"点击了第%ld张图片",pageIndex+1]];
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    self.countDownView.day = 1;
+    self.countDownView.hour = 2;
+    self.countDownView.minute = 3;
+    self.countDownView.second = 59;
+    [self.countDownView setFire];
 }
 
 @end

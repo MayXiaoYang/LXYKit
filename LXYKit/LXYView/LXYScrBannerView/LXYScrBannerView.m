@@ -84,6 +84,10 @@ typedef enum : NSUInteger {
         _currentImageView = [[UIImageView alloc]init];
         _currentImageView.backgroundColor = [UIColor lightGrayColor];
         _currentImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _currentImageView.userInteractionEnabled = YES;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTapImageView:)];
+        [_currentImageView addGestureRecognizer:tap];
     }
     return _currentImageView;
 }
@@ -332,6 +336,16 @@ typedef enum : NSUInteger {
 - (void)setScrCornerRadius:(CGFloat)ScrCornerRadius{
     _imgScrollView.layer.masksToBounds = YES;
     _imgScrollView.layer.cornerRadius = ScrCornerRadius;
+}
+
+-(void)didTapImageView:(UITapGestureRecognizer *)tap{
+    if (self.didTapImageBlock) {
+        self.didTapImageBlock(self.pageControl.currentPage);
+        return;
+    }
+    if (_delegate && [_delegate respondsToSelector:@selector(didSelectedImageView:withPageIndex:)]) {
+        [_delegate didSelectedImageView:(UIImageView*)tap.view withPageIndex:self.pageControl.currentPage];
+    }
 }
 @end
 
