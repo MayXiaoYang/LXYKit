@@ -53,7 +53,7 @@
         self.contentHorizontalAlignment = horAlignment;
     }
     if (target && action) {
-        [self addTarget:selectedTitle action:action forControlEvents:UIControlEventTouchUpInside];
+        [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     }
 }
 

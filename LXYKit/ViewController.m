@@ -12,6 +12,7 @@
 #import "LXYScrBannerView.h"
 #import "SPCarouselView.h"
 #import "LXYCountDownView.h"
+#import "LXYSearchViewController.h"
 @interface ViewController ()<LXYScrBannerViewDelegate>
 @property (nonatomic, assign)NSInteger num;
 @property (nonatomic, strong)LXYCountDownView *countDownView;
@@ -78,7 +79,7 @@
         }
         weakCountDownView.centerX = self.view.centerX;
     };
-    countDownView.autoAdaptiveWidth = NO;
+    countDownView.autoAdaptiveWidth = YES;
     [self.view addSubview:countDownView];
     [countDownView setFire];
     self.countDownView = countDownView;
@@ -111,6 +112,8 @@
         default:
             break;
     }
+    
+    [self createSearchBarView];
     
     
 }
@@ -195,6 +198,23 @@
     self.countDownView.minute = 3;
     self.countDownView.second = 59;
     [self.countDownView setFire];
+}
+
+-(void)createSearchBarView{
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setFrame:CGRectMake(0, 0, SCREEN_WIDTH - 90*WidthRatio, 36) title:@"点击进入搜索商品" titleFont:FontThin(14.0f) titleColor:[UIColor lightGrayColor] target:self action:@selector(btnSearchClick:)];
+    btn.backgroundColor = [UIColor grayColor];
+    btn.layer.masksToBounds = YES;
+    btn.layer.cornerRadius = 18;
+    self.navigationItem.titleView = btn;
+    
+}
+
+-(void)btnSearchClick:(UIButton *)sender{
+    LXYSearchViewController *searchVC = [[LXYSearchViewController alloc]init];
+    UINavigationController *searchNav = [[UINavigationController alloc]initWithRootViewController:searchVC];
+    [self presentViewController:searchNav animated:NO completion:nil];
 }
 
 @end

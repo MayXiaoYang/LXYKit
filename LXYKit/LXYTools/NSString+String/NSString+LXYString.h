@@ -41,6 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (CGFloat)getHeightWithText:(NSString *)text withTextFont:(UIFont *)font withTextWidth:(CGFloat)width;
 
++ (CGFloat)getWidthWithText:(NSString *)text withTextFont:(UIFont *)font withTextHeight:(CGFloat)height;
+
 
 /**
  汉字转拼音

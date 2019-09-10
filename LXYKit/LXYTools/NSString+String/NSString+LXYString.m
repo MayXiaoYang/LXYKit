@@ -66,6 +66,10 @@
     CGRect bounds = [text boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil];
     return ceil(bounds.size.height);
 }
++ (CGFloat)getWidthWithText:(NSString *)text withTextFont:(UIFont *)font withTextHeight:(CGFloat)height{
+    CGRect bounds = [text boundingRectWithSize:CGSizeMake(MAXFLOAT, height) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil];
+    return ceil(bounds.size.width);
+}
 
 - (NSString *)changeChineseCharactersToPinyinWithCapital:(BOOL)capital{
     NSMutableString *pinyin = [self mutableCopy];

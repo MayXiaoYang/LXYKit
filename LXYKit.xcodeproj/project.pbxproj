@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		615E4861AC74ABD410BF572F /* libPods-LXYKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6907962D284EB66175E4B36D /* libPods-LXYKit.a */; };
+		DB2123AB23262B0F005A89C5 /* LXYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2123AA23262B0F005A89C5 /* LXYSearchViewController.m */; };
+		DB2123AF23263068005A89C5 /* UIImage+LXYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2123AE23263068005A89C5 /* UIImage+LXYSearchBar.m */; };
+		DB2123B223263D71005A89C5 /* LXYHotSearchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2123B123263D71005A89C5 /* LXYHotSearchCollectionViewCell.m */; };
+		DB2123B523263DB9005A89C5 /* LXYCollectionViewLeftFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2123B423263DB9005A89C5 /* LXYCollectionViewLeftFlowLayout.m */; };
+		DB2123B823263F8C005A89C5 /* LXYHotSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2123B723263F8C005A89C5 /* LXYHotSearchModel.m */; };
 		DB56ACD7231633E200C068BF /* UILabel+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACD6231633E200C068BF /* UILabel+LXYExtension.m */; };
 		DB56ACDB2316596A00C068BF /* UIButton+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACDA2316596A00C068BF /* UIButton+LXYExtension.m */; };
 		DB56ACDF2316634900C068BF /* UITextField+LXYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB56ACDE2316634900C068BF /* UITextField+LXYExtension.m */; };
@@ -51,6 +56,7 @@
 		DB700DDB23151EAB00A6874F /* UIBarButtonItem+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DCB23151EAB00A6874F /* UIBarButtonItem+EasyBlock.m */; };
 		DB700DDC23151EAB00A6874F /* UIView+EasyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DCC23151EAB00A6874F /* UIView+EasyBlock.m */; };
 		DB700DDD23151EAB00A6874F /* EasyKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = DB700DD023151EAB00A6874F /* EasyKVO.m */; };
+		DB7C4EEA2327830900BADE55 /* LXYSearchCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7C4EE92327830900BADE55 /* LXYSearchCollectionReusableView.m */; };
 		DB87F49923238DFA00774EE7 /* LXYCountDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB87F49823238DFA00774EE7 /* LXYCountDownView.m */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +81,16 @@
 		5D94CB299FBA017B2D2ED6F2 /* Pods-LXYKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXYKit.debug.xcconfig"; path = "Target Support Files/Pods-LXYKit/Pods-LXYKit.debug.xcconfig"; sourceTree = "<group>"; };
 		6907962D284EB66175E4B36D /* libPods-LXYKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LXYKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4208B68E8A44B3D70A2E77C /* Pods-LXYKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXYKit.release.xcconfig"; path = "Target Support Files/Pods-LXYKit/Pods-LXYKit.release.xcconfig"; sourceTree = "<group>"; };
+		DB2123A923262B0F005A89C5 /* LXYSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYSearchViewController.h; sourceTree = "<group>"; };
+		DB2123AA23262B0F005A89C5 /* LXYSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYSearchViewController.m; sourceTree = "<group>"; };
+		DB2123AD23263068005A89C5 /* UIImage+LXYSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LXYSearchBar.h"; sourceTree = "<group>"; };
+		DB2123AE23263068005A89C5 /* UIImage+LXYSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LXYSearchBar.m"; sourceTree = "<group>"; };
+		DB2123B023263D71005A89C5 /* LXYHotSearchCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYHotSearchCollectionViewCell.h; sourceTree = "<group>"; };
+		DB2123B123263D71005A89C5 /* LXYHotSearchCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYHotSearchCollectionViewCell.m; sourceTree = "<group>"; };
+		DB2123B323263DB9005A89C5 /* LXYCollectionViewLeftFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYCollectionViewLeftFlowLayout.h; sourceTree = "<group>"; };
+		DB2123B423263DB9005A89C5 /* LXYCollectionViewLeftFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYCollectionViewLeftFlowLayout.m; sourceTree = "<group>"; };
+		DB2123B623263F8C005A89C5 /* LXYHotSearchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYHotSearchModel.h; sourceTree = "<group>"; };
+		DB2123B723263F8C005A89C5 /* LXYHotSearchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYHotSearchModel.m; sourceTree = "<group>"; };
 		DB56ACD5231633E200C068BF /* UILabel+LXYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+LXYExtension.h"; sourceTree = "<group>"; };
 		DB56ACD6231633E200C068BF /* UILabel+LXYExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LXYExtension.m"; sourceTree = "<group>"; };
 		DB56ACD92316596A00C068BF /* UIButton+LXYExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+LXYExtension.h"; sourceTree = "<group>"; };
@@ -163,6 +179,8 @@
 		DB700DD123151EAB00A6874F /* EasyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyBlock.h; sourceTree = "<group>"; };
 		DB700DD323151EAB00A6874F /* EasyBlock_typedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyBlock_typedef.h; sourceTree = "<group>"; };
 		DB700DD423151EAB00A6874F /* EasyBlockHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyBlockHeader.h; sourceTree = "<group>"; };
+		DB7C4EE82327830900BADE55 /* LXYSearchCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYSearchCollectionReusableView.h; sourceTree = "<group>"; };
+		DB7C4EE92327830900BADE55 /* LXYSearchCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYSearchCollectionReusableView.m; sourceTree = "<group>"; };
 		DB87F49723238DFA00774EE7 /* LXYCountDownView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXYCountDownView.h; sourceTree = "<group>"; };
 		DB87F49823238DFA00774EE7 /* LXYCountDownView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXYCountDownView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +218,32 @@
 				D4208B68E8A44B3D70A2E77C /* Pods-LXYKit.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB2123A823262AD5005A89C5 /* LXYSearchController */ = {
+			isa = PBXGroup;
+			children = (
+				DB2123A923262B0F005A89C5 /* LXYSearchViewController.h */,
+				DB2123AA23262B0F005A89C5 /* LXYSearchViewController.m */,
+				DB2123B023263D71005A89C5 /* LXYHotSearchCollectionViewCell.h */,
+				DB2123B123263D71005A89C5 /* LXYHotSearchCollectionViewCell.m */,
+				DB2123B323263DB9005A89C5 /* LXYCollectionViewLeftFlowLayout.h */,
+				DB2123B423263DB9005A89C5 /* LXYCollectionViewLeftFlowLayout.m */,
+				DB7C4EE82327830900BADE55 /* LXYSearchCollectionReusableView.h */,
+				DB7C4EE92327830900BADE55 /* LXYSearchCollectionReusableView.m */,
+				DB2123B623263F8C005A89C5 /* LXYHotSearchModel.h */,
+				DB2123B723263F8C005A89C5 /* LXYHotSearchModel.m */,
+			);
+			path = LXYSearchController;
+			sourceTree = "<group>";
+		};
+		DB2123AC2326300C005A89C5 /* UIImage+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB2123AD23263068005A89C5 /* UIImage+LXYSearchBar.h */,
+				DB2123AE23263068005A89C5 /* UIImage+LXYSearchBar.m */,
+			);
+			path = "UIImage+Extension";
 			sourceTree = "<group>";
 		};
 		DB56ACD32316337D00C068BF /* LXYKitExtension */ = {
@@ -353,6 +397,7 @@
 		DB700D7D23151C3200A6874F /* LXYTools */ = {
 			isa = PBXGroup;
 			children = (
+				DB2123AC2326300C005A89C5 /* UIImage+Extension */,
 				DB700D7E23151C3200A6874F /* UIColor+Hex */,
 				DB700D8123151C3200A6874F /* UIView+Toast */,
 				DB700D8623151C3200A6874F /* UIView+Frame */,
@@ -420,6 +465,7 @@
 		DB700D9923151C4200A6874F /* LXYView */ = {
 			isa = PBXGroup;
 			children = (
+				DB2123A823262AD5005A89C5 /* LXYSearchController */,
 				DB87F49623238DE300774EE7 /* LXYCountDownView */,
 				DB5C1F2A231762B300739702 /* LXYScrBannerView */,
 				DB700D9E23151C6400A6874F /* LQCalenderView */,
@@ -702,10 +748,12 @@
 				DB700D4F2315191800A6874F /* ViewController.m in Sources */,
 				DB700DB823151C6400A6874F /* LQCalenderHeadView.m in Sources */,
 				DB700DDB23151EAB00A6874F /* UIBarButtonItem+EasyBlock.m in Sources */,
+				DB2123B223263D71005A89C5 /* LXYHotSearchCollectionViewCell.m in Sources */,
 				DB700DBA23151C6400A6874F /* NSDate+LQCalender.m in Sources */,
 				DB700DB723151C6400A6874F /* LQCalenderView.m in Sources */,
 				DB700DD523151EAB00A6874F /* EasyGCD.m in Sources */,
 				DB56ACE723166CC000C068BF /* UIImageView+LXYExtension.m in Sources */,
+				DB2123B823263F8C005A89C5 /* LXYHotSearchModel.m in Sources */,
 				DB700DDD23151EAB00A6874F /* EasyKVO.m in Sources */,
 				DB5C1F382317CFD100739702 /* SPCarouselView.m in Sources */,
 				DB56ACD7231633E200C068BF /* UILabel+LXYExtension.m in Sources */,
@@ -717,11 +765,13 @@
 				DB56ACDF2316634900C068BF /* UITextField+LXYExtension.m in Sources */,
 				DB5C1F2D231762DE00739702 /* LXYScrBannerView.m in Sources */,
 				DB56ACE323166C2700C068BF /* UIView+LXYExtension.m in Sources */,
+				DB2123B523263DB9005A89C5 /* LXYCollectionViewLeftFlowLayout.m in Sources */,
 				DB700DDA23151EAB00A6874F /* UIControl+EasyBlock.m in Sources */,
 				DB700D9423151C3200A6874F /* UIView+LXYAnimation.m in Sources */,
 				DB700DB623151C6400A6874F /* LQCalenderWeekView.m in Sources */,
 				DB700D5A2315191B00A6874F /* main.m in Sources */,
 				DB700DB323151C6400A6874F /* NSString+LQCalender.m in Sources */,
+				DB2123AB23262B0F005A89C5 /* LXYSearchViewController.m in Sources */,
 				DB700DD923151EAB00A6874F /* EasyWeakHelper.m in Sources */,
 				DB700DB223151C6400A6874F /* LQCalenderDayModel.m in Sources */,
 				DB700D9123151C3200A6874F /* UIView+LXYToast.m in Sources */,
@@ -731,8 +781,10 @@
 				DB700D9323151C3200A6874F /* NSString+LXYString.m in Sources */,
 				DB56ACDB2316596A00C068BF /* UIButton+LXYExtension.m in Sources */,
 				DB700D4C2315191800A6874F /* AppDelegate.m in Sources */,
+				DB2123AF23263068005A89C5 /* UIImage+LXYSearchBar.m in Sources */,
 				DB700DD723151EAB00A6874F /* EasyEmpty.m in Sources */,
 				DB700DB423151C6400A6874F /* LQCalenderCollectionViewCell.m in Sources */,
+				DB7C4EEA2327830900BADE55 /* LXYSearchCollectionReusableView.m in Sources */,
 				DB87F49923238DFA00774EE7 /* LXYCountDownView.m in Sources */,
 				DB700DB523151C6400A6874F /* LQCalenderMonthModel.m in Sources */,
 			);
@@ -840,7 +892,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -893,7 +945,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -907,6 +959,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WGZJ3F765Y;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LXYKit/LXYKitPrefixHeader.pch";
 				INFOPLIST_FILE = LXYKit/Info.plist;
@@ -926,6 +979,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WGZJ3F765Y;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LXYKit/LXYKitPrefixHeader.pch";
 				INFOPLIST_FILE = LXYKit/Info.plist;
