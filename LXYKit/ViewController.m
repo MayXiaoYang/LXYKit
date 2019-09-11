@@ -180,6 +180,8 @@
         NSLog(@"btnIndex----->>>%ld",btnIndex);
     };
     [aleartView lxy_aleartViewShow];
+    
+    NSLog(@"测试提交");
 }
 
 -(void)hideToast{
