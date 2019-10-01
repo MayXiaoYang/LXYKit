@@ -419,10 +419,10 @@
 		DB700D8123151C3200A6874F /* UIView+Toast */ = {
 			isa = PBXGroup;
 			children = (
-				DB700D8223151C3200A6874F /* MBProgressHUD.m */,
-				DB700D8323151C3200A6874F /* UIView+LXYToast.m */,
 				DB700D8423151C3200A6874F /* MBProgressHUD.h */,
+				DB700D8223151C3200A6874F /* MBProgressHUD.m */,
 				DB700D8523151C3200A6874F /* UIView+LXYToast.h */,
+				DB700D8323151C3200A6874F /* UIView+LXYToast.m */,
 			);
 			path = "UIView+Toast";
 			sourceTree = "<group>";

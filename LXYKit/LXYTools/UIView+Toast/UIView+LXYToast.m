@@ -6,7 +6,7 @@
 //  Copyright © 2019 li xiao yang. All rights reserved.
 //
 
-#define kHudDuration 1
+#define kHudDuration 2
 
 #import "UIView+LXYToast.h"
 
@@ -77,6 +77,7 @@
     MBProgressHUD *hud = [self showBottomHudMode:MBProgressHUDModeText];
     hud.label.text = text;
     CGFloat duration = text.length > 10 ? kHudDuration * 2 : kHudDuration;
+    hud.offset = CGPointMake(0, SCREEN_HEIGHT/2 - navgationBarH/2 - tabbarH/2);
     [hud hideAnimated:YES afterDelay:duration];
     [self performSelector:@selector(lxy_hideHUD:) withObject:block afterDelay:duration];
 }

@@ -195,6 +195,10 @@ typedef enum : NSUInteger {
     }else{
         self.pageControl.currentPage = _lastPageIndex + 1;
     }
+    
+    if (self.didScrResult) {
+        self.didScrResult(self.pageControl.currentPage);
+    }
 }
 
 - (void)setImageWithImageView:(UIImageView *)imageView withPageIndex:(NSInteger)pageIndex{

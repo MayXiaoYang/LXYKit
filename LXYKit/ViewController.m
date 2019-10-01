@@ -16,6 +16,7 @@
 @interface ViewController ()<LXYScrBannerViewDelegate>
 @property (nonatomic, assign)NSInteger num;
 @property (nonatomic, strong)LXYCountDownView *countDownView;
+@property (nonatomic, strong)UILabel *pageLabel;
 @end
 
 @implementation ViewController
@@ -56,14 +57,30 @@
 //    bannerView.didTapImageBlock = ^(NSInteger pageIndex) {
 //        [self.view lxy_showBottomTextToastWithString:[NSString stringWithFormat:@"点击了第%ld张图片",pageIndex]];
 //    };
+    __weak typeof(self) weakSelf = self;
+    bannerView.didScrResult = ^(NSInteger pageIndex) {
+        weakSelf.pageLabel.text = [NSString stringWithFormat:@"%ld/3",pageIndex + 1];
+    };
     bannerView.delegate = self;
     [self.view addSubview:bannerView];
     
+    UILabel *pageLabel = [[UILabel alloc]initWithFrame:CGRectMake(bannerView.width - 69*WidthRatio, bannerView.height - 30*WidthRatio, 60*WidthRatio, 26*WidthRatio)];
+    pageLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+    pageLabel.textColor = [UIColor whiteColor];
+    pageLabel.layer.masksToBounds = YES;
+    pageLabel.layer.cornerRadius = 13*WidthRatio;
+    pageLabel.textAlignment = NSTextAlignmentCenter;
+    pageLabel.text = @"1/3";
+    pageLabel.font = FontThin(18);
+    [bannerView addSubview:pageLabel];
+    self.pageLabel = pageLabel;
+    
+    
 
     LXYCountDownView *countDownView = [[LXYCountDownView alloc]initWithFrame:CGRectMake(0, bannerView.bottomY + 49, 160, 40)];
-    countDownView.backgroundColor = [UIColor orangeColor];
+    countDownView.backgroundColor = [UIColor whiteColor];
     countDownView.centerX = self.view.centerX;
-    countDownView.day = 1;
+    countDownView.day = 0;
     countDownView.hour = 0;
     countDownView.minute = 0;
     countDownView.second = 9;

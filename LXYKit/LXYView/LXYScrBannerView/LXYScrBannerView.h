@@ -57,6 +57,11 @@ typedef NS_ENUM(NSInteger,imageViewContentModeType){
 /** 设置点击图片的回调 默认block回调，如果block，代理都存在，默认 */
 @property (nonatomic, copy)void(^didTapImageBlock)(NSInteger pageIndex);
 
+/*
+ 图片自动滑动回调
+ */
+@property (nonatomic, copy) void(^didScrResult)(NSInteger pageIndex);
+
 @property (nonatomic, weak)id <LXYScrBannerViewDelegate> delegate;
 
 

@@ -103,9 +103,9 @@
 }
 
 -(void)secondReduce{
-    if (self.day == 0 && self.hour == 0 && self.minute == 0 && self.second == 0) {
-        self.day = 1;self.hour = 1;self.minute = 1;self.second = 9;
-    }
+//    if (self.day == 0 && self.hour == 0 && self.minute == 0 && self.second == 0) {
+//        self.day = 1;self.hour = 1;self.minute = 1;self.second = 9;
+//    }
     if (self.second > 0) {
         self.second--;
     }else{
@@ -117,7 +117,7 @@
             if (self.hour>0) {
                 self.hour--;
             }else{
-                self.hour = 11;
+                self.hour = 23;
                 if (self.day > 0) {
                     self.day--;
                 }else{
